@@ -1,0 +1,211 @@
+
+/* 
+  header-1-css-start
+*/
+
+
+.main-navigation {
+  .navbar-nav {
+    display: inherit;
+    li {
+      display: inline-block;
+      position: relative;
+
+      &:not(:last-child) {
+        margin-right: 40px;
+
+        @media #{$xl,$lg} {
+          margin-right: 20px;
+        }
+      }
+      
+      &:is(.dropdown) {
+        > a {
+          padding-right: 15px;
+          &::before {
+            content: "\f107";
+            font-family: "Font Awesome 6 Pro";
+            font-weight: 700;
+            position: absolute;
+            font-size: 14px;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+
+      a {
+        position: relative;
+        z-index: 1;
+        font-family: var(--blta-sd-font);
+        font-size: 17px;
+        font-weight: 700;
+        text-decoration: none;
+        color: #fff;
+        padding: 27px 0;
+        display: inline-block;
+        text-transform: capitalize;
+        line-height: 1;
+        transition: 400ms var(--cube-1);
+
+        &::after {
+          content: "";
+          width: 0%;
+          height: 1px;
+          background-color: #fff;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          transition: 400ms var(--cube-1);
+          opacity: 0;
+        }
+      }
+
+
+      .dropdown-menu {
+        left: 0;
+        top: 100%;
+        z-index: 100;
+        margin: 0px;
+        padding: 20px 20px;
+        height: auto;
+        min-width: 250px;
+        display: block;
+        border: none;
+        border-top: 2px solid var(--blta-pr-1);
+        box-shadow: 0 10px 50px 0 rgb(0 0 0 / 5%);
+        border-radius: 0;
+        position: absolute;
+        background: #fff;
+        border-radius: 2px;
+        text-align: left;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(15px) translateZ(0);
+        transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1), visibility 0.4s cubic-bezier(0.19, 1, 0.22, 1), transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+        
+        li {
+          display: block;
+          margin: 0;
+          position: relative;
+
+          a {
+            color: var(--blta-pr-color);
+            width: 100%;
+            font-weight: 500;
+            display: block;
+            padding: 10px 0px;
+
+            &::after {
+              background: var(--blta-pr-1);
+            }
+          }
+
+
+          .dropdown-menu {
+            top: 0;
+            left: calc(100% + 20px);
+            min-width: 250px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(15px) translateZ(0);
+            transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1), visibility 0.4s cubic-bezier(0.19, 1, 0.22, 1), transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+
+          }
+
+          &:hover {
+            .dropdown-menu {
+              opacity: 1;
+              visibility: visible;
+              transform: translateY(0px) translateZ(0);
+            }
+
+            > a {
+              color: var(--blta-pr-1);
+
+              &::after {
+                bottom: 0;
+              }
+            }
+          }
+        }
+      }
+
+      &:hover {
+        > a {
+          &::after {
+            bottom: 34%;
+            opacity: 1;
+            width: 100%;
+          }
+        }
+        .dropdown-menu {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0px) translateZ(0);
+        }
+      }
+    }
+  }
+}
+
+/* 
+  header-1-css-end
+*/
+
+
+/* 
+  sticky-header-css-start
+*/
+.txa_sticky_header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 500ms var(--cube-1);
+  z-index: 8;
+
+  &:is(.blta-header-1-area) {
+    top: 25px;
+    &:is(.txa_sticky) {
+      transform: translateY(-150%);
+ 
+
+      &:is(.txa_sticky_show) {
+        transform: translateY(0%);
+      }
+    }
+
+  }
+
+  &:is(.blta-header-2-area) {
+    top: 30px;
+    &:is(.txa_sticky) {
+      transform: translateY(-150%);
+      background-color: #222429;
+      &:is(.txa_sticky_show) {
+        transform: translateY(0%);
+      }
+    }
+
+  }
+
+  &:is(.blta-header-3-area) {
+    &:is(.txa_sticky) {
+      transform: translateY(-150%);
+      background-color: #222429;
+      &:is(.txa_sticky_show) {
+        transform: translateY(0%);
+      }
+    }
+
+  }
+
+}
+
+
+/* 
+  sticky-header-css-end
+*/

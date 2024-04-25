@@ -1,0 +1,89 @@
+
+
+/* 
+    home-1-heading-paragraph-css-start
+*/
+
+.blta-heading-1 {
+    font-family: var(--blta-pr-font);
+    line-height: 1.07;
+    color: #000;
+    text-transform: capitalize;
+    margin-bottom: 0px;
+
+    &:is(.has-color-white) {
+        color: #fff;
+    }
+
+}
+
+.blta-para-1 {
+    font-family: var(--blta-para-font);
+    font-weight: 400;
+    line-height: 30px;
+    font-size: 16px;
+    color: #444444;
+    margin-bottom: 0px;
+    &:is(.has-color-white) {
+        color: #fff;
+    }
+    &:is(.has-color-black) {
+        color: #000;
+    }
+
+}
+
+.blta-subtitle-1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 19px;
+    color: #000;
+    margin-bottom: 17px;
+
+    .icon {
+        width: 25px;
+        height: 25px;
+        background: #000;
+        border-radius: 50%;
+        display: inline-flex;
+        flex: 0 0 auto;
+        color: #fff;
+        font-size: 14px;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+
+        &:is(.has-color-2) {
+            color: #fff;
+            background: var(--blta-pr-2);
+        }
+    }
+
+    &:is(.has-color-white) {
+        color: #fff;
+        .icon {
+            background: var(--blta-pr-1);
+            color: #000;
+        }
+    }
+
+    &:is(.has-color-pr) {
+        color: var(--blta-pr-1);
+        .icon {
+            background: var(--blta-pr-1);
+            color: #000;
+        }
+    }
+
+    &:is(.has-color-2) {
+        color: #222429;
+    }
+
+
+}
+
+
+/* 
+    home-1-heading-paragraph-css-end
+*/

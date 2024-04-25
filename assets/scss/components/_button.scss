@@ -1,0 +1,32 @@
+
+/* 
+    button-component-start
+*/
+
+/* 
+    search-btn-1-start 
+*/
+.blta-search-btn-1 {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    line-height: 1;
+    font-size: 24px;
+    flex: 0 0 auto;
+    transition: 400ms var(--cube-1);
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    padding: 0 2px;
+
+    &:hover {
+        color: #000;
+    }
+
+
+}
+
+/* 
+    button-component-end
+*/
