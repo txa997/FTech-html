@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
 
 /* 
     root-veriable-start
@@ -8,15 +7,12 @@
 :root {
     scroll-behavior: inherit;
 
-    --blta-pr-font: "Barlow Semi Condensed", sans-serif;
-    --blta-sd-font: "Exo 2", sans-serif;
-    --blta-para-font: "Epilogue", sans-serif;
+    --ftc-unbounded: "Unbounded", sans-serif;
+    --ftc-pr-font: "Ubuntu", sans-serif;
 
-    --black-color: #000000;
-    --white-color: #fff;
-
-    --blta-pr-1: #ff6600;
-    --blta-pr-2: #fa7d09;
+    --ftc-pr-1: #c4ef17;
+    
+    --ftc-heading-1: #222627;
 
     --cube-1: cubic-bezier(.23,1,.32,1);
     --cube-2: cubic-bezier(0.31, -0.105, 0.43, 1.4);

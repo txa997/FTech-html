@@ -459,106 +459,140 @@ var bltacta4 = gsap.timeline({
 bltacta4.from( ".blta-cta-4-img" , { yPercent: 100 ,  duration:1 } )
 
 
-var st = $(".blta-split-text");
-if(st.length == 0) return;
-gsap.registerPlugin(SplitText);
-st.each(function(index, el) {
-	el.split = new SplitText(el, { 
-		type: "lines,words,chars",
-		linesClass: "split-line"
-	});
-	gsap.set(el, { perspective: 400 });
-
-
-	if( $(el).hasClass('split-in-left') ){
-		gsap.set(el.split.chars, {
-			opacity: 1,
-			color: "#ff6600",
-			x: "-50",
-			ease: "circ.out",
-		});
-	}
-
-	el.anim = gsap.to(el.split.chars, {
-		scrollTrigger: {
-			trigger: el,
-			start: "top 90%",
+// hero-1-slider
+if($('.ftc-hero-1-active').length) {
+	let ftchero1 = new Swiper('.ftc-hero-1-active', {
+		loop: true,
+		spaceBetween: 20,
+		slidesPerView: 5,
+		speed: 1000,
+		autoplay: {
+			delay: 5000,
 		},
-		x: "0",
-		y: "0",
-		rotateX: "0",
-		color: "inherit",
-		scale: 1,
-		opacity: 1,
-		duration: 0.8, 
-		stagger: 0.02,
+	
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+	
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 3,
+			},
+			1400: {
+				slidesPerView: 4,
+			},
+			1600: {
+				slidesPerView: 4,
+			},
+			1800: {
+				slidesPerView: 5,
+			},
+		},
 	});
-});
+}
+
+// choose-us-1-slider
+if($('.ftc-choose-us-1-client-active').length) {
+	let ftchero1 = new Swiper('.ftc-choose-us-1-client-active', {
+		loop: true,
+		spaceBetween: 20,
+		slidesPerView: 6,
+		speed: 3000,
+		autoplay: {
+			delay: 4000,
+		},
+	
+		breakpoints: {
+			0: {
+				slidesPerView: 2,
+			},
+			576: {
+				slidesPerView: 3,
+			},
+			768: {
+				slidesPerView: 4,
+			},
+			992: {
+				slidesPerView: 5,
+			},
+			1200: {
+				slidesPerView: 6,
+			},
+
+		},
+	});
+}
 
   
-// team-1-active
-let team1_thumb = new Swiper('.team-1-slider-prw-active', {
-	spaceBetween: 30,
-	loop: true,
-	speed: 1000,
-	// watchSlidesProgress: true,	
-	slidesPerView: 2,
+// project-1-slider
+if($('.ftc-project-1-active').length) {
+	let slider = new Swiper('.ftc-project-1-active', {
+		loop: true,
+		spaceBetween: 30,
+		slidesPerView: 3,
+		speed: 1000,
+		autoplay: {
+			delay: 5000,
+		},
 
-	breakpoints: {
-		0: {
-			slidesPerView: 1,
+		navigation: {
+			nextEl: ".ftc_project_1_next",
+			prevEl: ".ftc_project_1_prev",
 		},
-		480: {
-			slidesPerView: 2,
-		},
-	  },
-});
+	
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 1,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 2,
+			},
+			1200: {
+				slidesPerView: 3,
+			},
 
-let team1 = new Swiper('.team-1-slider-main-active', {
-	loop: true,
-	spaceBetween: 0,
-	slidesPerView: 1,
-	speed: 1000,
-	autoplay: {
-		delay: 5000,
-		},
-	thumbs: {
-		swiper: team1_thumb,
-	},
-});
 
+		},
+	});
+}
+  
+// testimonial-1-slider
+if($('.ftc-testimonial-1-active').length) {
+	let slider = new Swiper('.ftc-testimonial-1-active', {
+		loop: true,
+		spaceBetween: 30,
+		slidesPerView: 1,
+		speed: 1000,
+		autoplay: {
+			delay: 50000000,
+		},
 
-// product-1-active
-let product1 = new Swiper('.product-1-slider-active', {
-	loop: true,
-	spaceBetween: 20,
-	slidesPerView: 1,
-	speed: 1000,
-	autoplay: {
-		delay: 5000,
-	},
-	navigation: {
-		nextEl: ".blta_product_1_next",
-		prevEl: ".blta_product_1_prev",
-	},
-	breakpoints: {
-		0: {
-			slidesPerView: 1,
+		navigation: {
+			nextEl: ".ftc_testimonial_1_next",
+			prevEl: ".ftc_testimonial_1_prev",
 		},
-		576: {
-			slidesPerView: 1,
-		},
-		768: {
-			slidesPerView: 2,
-		},
-		992: {
-			slidesPerView: 3,
-		},
-		1200: {
-			slidesPerView: 4,
-		},
-	},
-});
+	
+	});
+}
 
 
 // bootstrap-toltip

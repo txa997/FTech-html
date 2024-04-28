@@ -1,0 +1,119 @@
+ /* 
+    text-slide-1-start
+ */
+
+.ftc-text-slide-1 {
+    &-area {
+        background: var(--ftc-pr-1);
+        border-bottom: 10px solid #fff;
+        padding: 30px 0;
+    }
+
+    &-wrap {
+        display: flex;
+        gap: 20px;
+        animation: text-slide-1 20s infinite linear;
+
+        @media #{$xs} {
+            animation: text-slide-1 10s infinite linear;
+        }
+
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
+
+    &-item {
+        font-size: 90px;
+        line-height: 1;
+        letter-spacing: -4px;
+        font-family: var(--ftc-unbounded);
+        flex: 0 0 auto;
+        margin-bottom: 0;
+        color: #191917;
+
+        @media #{$xl} {
+            font-size: 80px; 
+        }
+
+        @media #{$lg} {
+            font-size: 70px; 
+        }
+
+        @media #{$md} {
+            font-size: 60px; 
+        }
+
+        @media #{$xs} {
+            font-size: 40px; 
+        }
+
+        @media #{$sm} {
+            font-size: 50px; 
+        }
+    }
+}
+
+.ftc-text-slide-2 {
+    &-area {
+        background: #191917;
+        padding: 30px 0;
+    }
+
+    &-wrap {
+        display: flex;
+        gap: 20px;
+        animation: text-slide-2 20s infinite linear;
+
+        @media #{$xs} {
+            animation: text-slide-2 10s infinite linear;
+        }
+
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
+
+    &-item {
+        font-size: 45px;
+        line-height: 1;
+        letter-spacing: -2px;
+        font-family: var(--ftc-unbounded);
+        flex: 0 0 auto;
+        margin-bottom: 0;
+        color: #fff;
+
+        @media #{$xs} {
+            font-size: 30px; 
+        }
+
+        @media #{$sm} {
+            font-size: 40px; 
+        }
+    }
+}
+
+
+
+@keyframes text-slide-1 {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes text-slide-2 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+
+ /* 
+    text-slide-1-end
+ */

@@ -4,6 +4,55 @@
 */
 
 
+.ftc-header-1 {
+  &-area {
+    background: transparent;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+  }
+
+  &-container {
+    max-width: 1830px;
+  }
+
+  &-row {
+    gap: 100px;
+
+    .main-navigation {
+      margin-left: auto;
+    }
+  }
+
+  &-logo {
+    &-1 {
+      position: relative;
+      z-index: 1;
+    }
+    &-il {
+    }
+  }
+  &-action-link {
+    gap: 10px;
+
+    .ftc-btn-1  {
+      @media #{$lg} {
+        display: none;
+      }
+      @media #{$xs} {
+        display: none;
+      }
+      @media #{$sm} {
+        display: block;
+      }
+    }
+  }
+  
+}
+
+
 .main-navigation {
   .navbar-nav {
     display: inherit;
@@ -12,7 +61,7 @@
       position: relative;
 
       &:not(:last-child) {
-        margin-right: 40px;
+        margin-right: 50px;
 
         @media #{$xl,$lg} {
           margin-right: 20px;
@@ -23,14 +72,15 @@
         > a {
           padding-right: 15px;
           &::before {
-            content: "\f107";
+            content: "\2b";
             font-family: "Font Awesome 6 Pro";
             font-weight: 700;
             position: absolute;
-            font-size: 14px;
+            font-size: 10px;
             right: 0;
             top: 50%;
             transform: translateY(-50%);
+            transition: 400ms var(--cube-2);
           }
         }
       }
@@ -38,12 +88,12 @@
       a {
         position: relative;
         z-index: 1;
-        font-family: var(--blta-sd-font);
-        font-size: 17px;
+        font-family: var(--ftc-pr-font);
+        font-size: 18px;
         font-weight: 700;
         text-decoration: none;
         color: #fff;
-        padding: 27px 0;
+        padding: 23px 0;
         display: inline-block;
         text-transform: capitalize;
         line-height: 1;
@@ -53,7 +103,7 @@
           content: "";
           width: 0%;
           height: 1px;
-          background-color: #fff;
+          background-color: var(--ftc-pr-1);
           position: absolute;
           left: 0;
           bottom: 0;
@@ -96,6 +146,7 @@
             font-weight: 500;
             display: block;
             padding: 10px 0px;
+            font-size: 16px;
 
             &::after {
               background: var(--blta-pr-1);
@@ -134,10 +185,16 @@
 
       &:hover {
         > a {
+          color: var(--ftc-pr-1);
+
           &::after {
             bottom: 34%;
             opacity: 1;
             width: 100%;
+          }
+
+          &::before {
+            transform: translateY(-50%) rotate(360deg);
           }
         }
         .dropdown-menu {
