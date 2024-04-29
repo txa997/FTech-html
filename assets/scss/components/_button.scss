@@ -49,6 +49,7 @@
         }
     }
     &:hover {
+        transform: scale(95%);
         span {
             &:nth-child(2) {
                 transform: translateY(-4px) rotate(308deg);

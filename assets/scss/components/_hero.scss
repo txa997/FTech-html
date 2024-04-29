@@ -151,7 +151,6 @@
                 font-size: 100px;
                 display: inline-block;
                 color: var(--ftc-pr-1);
-                line-height: 1;
 
                 @media #{$lg,$md,$xs} {
                     font-size: 70px;
@@ -161,6 +160,7 @@
             .item-title {
                 font-size: 30px;
                 transition: 400ms var(--cube-1);
+                transform-origin: left;
 
                 @media #{$lg,$md} {
                     font-size: 24px;
@@ -172,6 +172,7 @@
 
                 &:hover {
                     color: var(--ftc-pr-1);
+                    transform: scaleX(98%);
                 }
             }
         
@@ -191,6 +192,7 @@
                 width: 100%;
                 height: 2px;
                 background: #151522;
+                transition: 400ms var(--cube-1);
             }
 
             .il-1 {
@@ -223,6 +225,18 @@
                 @media #{$xs} {
                     bottom: -190px;
 
+                }
+            }
+
+            &:hover {
+                .item-icon {
+                    animation: wobble-vertical 1s ease-in-out;
+                }
+                .il-1  {
+                    animation: wobble-vertical 1s ease-in-out;
+                }
+                .line {
+                    background: #c4ef173b;
                 }
             }
             

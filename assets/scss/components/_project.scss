@@ -87,6 +87,10 @@
     }
 
     &-slider {
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+
         .swiper-container {
             .swiper-wrapper {
                 .swiper-slide {
@@ -130,13 +134,16 @@
 
 
     &:hover {
+
+        animation: wobble-vertical 1s ease-in-out;
+
         background-color: var(--ftc-pr-1);
         border-color: transparent;
-        transform: scale(95%);
+        // transform: scale(95%);
 
-        i {
-            transform: rotateY(360deg);
-        }
+        // i {
+        //     transform: rotateY(360deg);
+        // }
     }
 
     &:is(.has-color-black) {

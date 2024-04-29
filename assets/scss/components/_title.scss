@@ -79,19 +79,23 @@
     letter-spacing: -2px;
     margin-bottom: 10px;
 
-    @media #{$lg} {
+    @media #{$xl} {
         font-size: 50px;
     }
 
-    @media #{$md} {
+    @media #{$lg} {
         font-size: 45px;
+    }
+
+    @media #{$md} {
+        font-size: 40px;
     }
     
     @media #{$xs} {
         font-size: 30px;
     }
     @media #{$sm} {
-        font-size: 40px;
+        font-size: 35px;
     }
 
     &:is(.has-color-white) {

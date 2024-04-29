@@ -1,0 +1,38 @@
+ /* 
+    cta-1-start
+ */
+ .ftc-cta-1 {
+    &-content {
+        gap: 30px;
+        .title {
+            font-size: 40px;
+            line-height: 1.5;
+            color: #1e1d1d;
+            letter-spacing: -2px;
+
+            @media #{$xs} {
+                font-size: 32px;
+            }
+        }
+    }
+    &-social {
+        gap: 10px 35px;
+
+        @media #{$xs} {
+            gap: 10px 15px;
+        }
+        
+        .s-link {
+            font-size: 20px;
+            color: #1e1d1d;
+            transition: 400ms var(--cube-1);
+
+            &:hover {
+                color: var(--ftc-pr-1);
+            }
+        }
+    }
+ }
+ /* 
+    cta-1-end
+ */

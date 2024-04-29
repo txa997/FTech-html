@@ -29,63 +29,24 @@ document.addEventListener("DOMContentLoaded", function () {
 				  preloader.remove();
 
 
+
 	  
 			  }, 1000 ) ;
 		}
 
-		// hero-1-slider
-		if($('.blta-hero-1-active').length) {
-			let hero1 = new Swiper('.blta-hero-1-active', {
-				loop: true,
-				speed: 1000,
-				effect: 'fade',
-				autoplay: {
-					delay: 6000,
-				},
-				fadeEffect: {
-					crossFade: true
-				},
-				navigation: {
-					nextEl: ".blta_hero_1_next",
-					prevEl: ".blta_hero_1_prev",
-				},
-			});
-		}
+		// text-animation
+		Splitting();
 
-		// hero-3-slider
-		if($('.blta-hero-3-active').length) {
-			let hero3 = new Swiper('.blta-hero-3-active', {
-				loop: true,
-				speed: 2000,
-				effect: 'fade',
-				autoplay: {
-					delay: 6000,
-				},
-				fadeEffect: {
-					crossFade: true
-				},
-				navigation: {
-					nextEl: ".blta_hero_3_next",
-					prevEl: ".blta_hero_3_prev",
-				},
-			});
-		}
+		// hero-1-animation
+		const h1tl = gsap.timeline();
 
+		h1tl.fromTo(".ftc-hero-1-content" , {  opacity: 0, duration: 1 }, { opacity: 1, })
+			.from(".ftc-hero-1-content .btn-wrap " , {  transform: "rotateX(47deg) translateY(-200px)" , transformOrigin: "50% 0%",		duration:1.5, ease: "bounce.out", opacity:0 })
+			.from(".ftc-hero-1-content .inner-div " , {  transform: "rotateX(47deg) translateY(-200px)" , transformOrigin: "50% 0%",
+			duration:1.5, ease: "bounce.out", opacity:0 }, "<.3")
+			.from(".ftc-hero-1-content .title  " , {  transform: "rotateX(47deg) translateY(-200px)" , transformOrigin: "50% 0%",duration:1.5, ease: "bounce.out", opacity:0 }, "<.3")
+			.from(".ftc-hero-1-content .subtitle  " , {  transform: "rotateX(47deg) translateY(-200px)" , transformOrigin: "50% 0%",duration:1.5, ease: "bounce.out", opacity:0 }, "<.3");
 
-		// home-2-hero-2-animation
-		const h2tl = gsap.timeline();
-
-		h2tl.fromTo(".bg-plane" , { xPercent: -100 , yPercent: 150 }, { xPercent: 180, yPercent: -80, duration: 2 });
-		h2tl.from(".bg-building img" , { scale: 2, duration: 1 } , "<1" );
-		h2tl.from(".blta-hero-2-bg-img-overly" , { opacity: 0, duration: .5 }, "<.5" );
-		h2tl.from(".blta-hero-2-bg-shape " , { xPercent: -100, duration: .5 }, "<.5" );
-		h2tl.from(".blta-hero-2-title-3" , { Transform: "rotateY(81deg)" }, "<.5" );
-		h2tl.from(".blta-hero-2-title-2" , { Transform: "rotateY(81deg)"  }, "<.5" );
-		h2tl.from(".blta-hero-2-title-1" , { Transform: "rotateY(81deg)"  }, "<.5" );
-		h2tl.from(".blta-hero-2-disc" , { Transform: "rotateY(81deg)"  }, "<.5" );
-		h2tl.from(".blta-hero-2-btn" , { Transform: "rotateY(81deg)"  }, "<.5" );
-		h2tl.from(".blta-hero-2-img img" , { yPercent: 100 , duration: 1 }, "<.5" );
-		
 
 	})
 
@@ -358,6 +319,23 @@ gsap.utils.toArray('.blta-fade-down img').forEach((el, index) => {
 	.from(el, { opacity: 1 , yPercent: 100 }, {opacity: 1, duration: 1, immediateRender: false})
 })
 
+// blta-fade-down
+gsap.utils.toArray('.ftc-stitle .line').forEach((el, index) => { 
+	let tl1 = gsap.timeline({
+	  scrollTrigger: {
+		trigger: ".ftc-stitle",
+		scrub: 2,
+		start: "top 80%",
+		end: "top 50%",
+		toggleActions: "play none none reverse",
+		 markers: true
+	  }
+	})
+	
+	tl1
+	.from(el, {  background: "#c4ef17" ,  scaleX: 0, transformOrigin: "left" }, { duration: 1,  immediateRender: false})
+})
+
 // hero-2-animation
 var bltahro2 = gsap.timeline({
 
@@ -512,7 +490,7 @@ if($('.ftc-choose-us-1-client-active').length) {
 		slidesPerView: 6,
 		speed: 3000,
 		autoplay: {
-			delay: 4000,
+			delay: 40000000,
 		},
 	
 		breakpoints: {
@@ -583,7 +561,7 @@ if($('.ftc-testimonial-1-active').length) {
 		slidesPerView: 1,
 		speed: 1000,
 		autoplay: {
-			delay: 50000000,
+			delay: 5000,
 		},
 
 		navigation: {
@@ -727,6 +705,13 @@ if($('.nice-select').length) {
 	$('.nice-select select').niceSelect();
 }
 
-
+// parallax-img
+$('.parallax-img').parallaxie({
+	speed: 0.5,    
+	repeat: "repeat", 
+	size: "auto",  
+	pos_x: "center", 
+	offset: 0      
+});
 
 })(jQuery);
