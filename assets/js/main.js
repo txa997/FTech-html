@@ -7,8 +7,12 @@
 (function ($) {
 "use strict";
 
+
+const lenis = new Lenis({
+	duration: 2,	
+})
+
 // smoooth scroll activation start
-const lenis = new Lenis()
 function raf(time) {
   lenis.raf(time)
   requestAnimationFrame(raf)
@@ -757,12 +761,7 @@ if($('.nice-select').length) {
 }
 
 // parallax-img
-$('.parallax-img').parallaxie({
-	speed: 0.5,    
-	repeat: "repeat", 
-	size: "auto",  
-	pos_x: "center", 
-	offset: 0      
+$('.parallax-img').parallaxie({  
 });
 
 })(jQuery);
