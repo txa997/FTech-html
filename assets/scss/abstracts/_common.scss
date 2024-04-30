@@ -186,10 +186,12 @@ input:focus::placeholder, textarea:focus::placeholder {
     z-index: 3;
 }
 
-.blta-split-text {
+.ftc-split-text {
 	text-transform: unset !important;
 	letter-spacing: -.1px;
 	overflow: hidden;
+    perspective: 2000px;
+    transform-style: preserve-3d;
 	.split-line {
 		div {
 			div {

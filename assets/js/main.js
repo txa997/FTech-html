@@ -177,7 +177,6 @@ if (menuToggle2) {
 	
 }
 
-
 // image-paralax-animation-start
 gsap.utils.toArray(".image-pllx").forEach(function(container) {
     let image = container.querySelector("img");
@@ -198,78 +197,13 @@ gsap.utils.toArray(".image-pllx").forEach(function(container) {
 		scale: 1.1,
         ease: "none",
       }); 
-  });
+});
 
-// blta-img-animation
-gsap.utils.toArray('.blta-img').forEach((el, index) => { 
-	let tl1 = gsap.timeline({
-	  scrollTrigger: {
-		trigger: el,
-		scrub: 1,
-		start: "top 80%",
-		end: "top 50%",
-		toggleActions: "play none none reverse",
-		 markers: false
-	  }
-	})
-	
-	tl1
-	.from(el, { Transform: "rotateY(60deg) translateX(-190px)" }, {opacity: 1, duration: 1, immediateRender: false})
-})
 
-// blta-img-animation-2
-gsap.utils.toArray('.blta-img-2').forEach((el, index) => { 
-	let tl1 = gsap.timeline({
-	  scrollTrigger: {
-		trigger: el,
-		scrub: 1,
-		start: "top 80%",
-		end: "top 50%",
-		toggleActions: "play none none reverse",
-		 markers: false
-	  }
-	})
-	
-	tl1
-	.from(el, { Transform: "rotateY(-60deg) translateX(190px)" }, {opacity: 1, duration: 1, immediateRender: false})
-})
 
-// blta-img-animation-2
-gsap.utils.toArray('.blta-img-3').forEach((el, index) => { 
-	let tl1 = gsap.timeline({
-	  scrollTrigger: {
-		trigger: el,
-		scrub: 1,
-		start: "top 80%",
-		end: "top 50%",
-		toggleActions: "play none none reverse",
-		 markers: false
-	  }
-	})
-	
-	tl1
-	.from(el, { Transform: "rotateX(-60deg) translateY(190px)" }, {opacity: 1, duration: 1, immediateRender: false})
-})
 
-// blta-scale-plus
-gsap.utils.toArray('.blta-scale-plus').forEach((el, index) => { 
-	let tl1 = gsap.timeline({
-	  scrollTrigger: {
-		trigger: el,
-		scrub: 1,
-		start: "top 85%",
-		end: "buttom 50%",
-		toggleActions: "play none none reverse",
-		 markers: false
-	  }
-	})
-	
-	tl1
-	.from(el, { scale: 2 }, {opacity: 1, duration: 1, immediateRender: false})
-})
-
-// blta-fade-left
-gsap.utils.toArray('.blta-fade-left').forEach((el, index) => { 
+// ftc-fade-left
+gsap.utils.toArray('.ftc-fade-left').forEach((el, index) => { 
 	let tl1 = gsap.timeline({
 	  scrollTrigger: {
 		trigger: el,
@@ -285,8 +219,8 @@ gsap.utils.toArray('.blta-fade-left').forEach((el, index) => {
 	.from(el, { opacity: 1 , xPercent: -100 }, {opacity: 1, duration: 1, immediateRender: false})
 })
 
-// blta-fade-right
-gsap.utils.toArray('.blta-fade-right').forEach((el, index) => { 
+// ftc-fade-right
+gsap.utils.toArray('.ftc-fade-right').forEach((el, index) => { 
 	let tl1 = gsap.timeline({
 	  scrollTrigger: {
 		trigger: el,
@@ -302,139 +236,217 @@ gsap.utils.toArray('.blta-fade-right').forEach((el, index) => {
 	.from(el, { opacity: 1 , xPercent: 100 }, {opacity: 1, duration: 1, immediateRender: false})
 })
 
-// blta-fade-down
-gsap.utils.toArray('.blta-fade-down img').forEach((el, index) => { 
+// ftc-fade-down
+gsap.utils.toArray('.ftc-fade-down').forEach((container, index) => { 
+    let images = gsap.utils.toArray(container.querySelectorAll('img'));
+
+    let tl1 = gsap.timeline({
+        scrollTrigger: {
+            trigger: container,
+            scrub: 2,
+            start: "top 70%",
+            end: "top 50%",
+            toggleActions: "play none none reverse",
+            markers: false
+        }
+    });
+
+    tl1.from(images, { opacity: 0, yPercent: -100,  filter: "blur(30px)", stagger: 0.2, duration: 1 });
+});
+
+
+// ftc-line-left
+gsap.utils.toArray('.ftc-line-left').forEach((el, index) => { 
 	let tl1 = gsap.timeline({
 	  scrollTrigger: {
-		trigger: ".blta-fade-down",
+		trigger: el,
 		scrub: 2,
-		start: "top 70%",
-		end: "top 50%",
+		start: "top 90%",
+		end: "top 40%",
 		toggleActions: "play none none reverse",
 		 markers: false
 	  }
 	})
 	
 	tl1
-	.from(el, { opacity: 1 , yPercent: 100 }, {opacity: 1, duration: 1, immediateRender: false})
+	.from(el, { scaleX: 0, transformOrigin: "left", duration: 2, })
 })
 
-// blta-fade-down
-gsap.utils.toArray('.ftc-stitle .line').forEach((el, index) => { 
+// ftc-line-right
+gsap.utils.toArray('.ftc-line-right').forEach((el, index) => { 
 	let tl1 = gsap.timeline({
 	  scrollTrigger: {
-		trigger: ".ftc-stitle",
+		trigger: el,
 		scrub: 2,
-		start: "top 80%",
-		end: "top 50%",
+		start: "top 90%",
+		end: "top 40%",
 		toggleActions: "play none none reverse",
-		 markers: true
+		 markers: false
 	  }
 	})
 	
 	tl1
-	.from(el, {  background: "#c4ef17" ,  scaleX: 0, transformOrigin: "left" }, { duration: 1,  immediateRender: false})
+	.from(el, { scaleX: 0, transformOrigin: "right", duration: 2, })
 })
 
-// hero-2-animation
-var bltahro2 = gsap.timeline({
 
-	scrollTrigger: {
-	  animation: bltahro2,
-	  trigger: '.blta-hero-2-area',
-	  start: "top 0%",
-	  end: "bottom 0%",
-	  scrub: 2,
-	  toggleActions: "play reverse play reverse",
-	  markers: false
-	}
-});
+
+// ftc-clip-left
+gsap.utils.toArray('.ftc-clip-left').forEach((el, index) => { 
+	let tl1 = gsap.timeline({
+	  scrollTrigger: {
+		trigger: el,
+		scrub: 2,
+		start: "top 90%",
+		end: "top 60%",
+		toggleActions: "play none none reverse",
+		 markers: false
+	  }
+	})
 	
-bltahro2.fromTo(".blta-hero-2-bg-img .bg-building" , { scale: 1 ,  duration:1 }, { scale: 2  });
+	tl1
+	.fromTo(el, { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)", transformOrigin: "left", duration: 2, }, { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" } )
+})
 
-// hero-3-animation
-var bltahro3 = gsap.timeline({
 
-	scrollTrigger: {
-	  animation: bltahro3,
-	  trigger: '.blta-hero-3-area',
-	  start: "top 0%",
-	  end: "bottom 0%",
-	  scrub: 2,
-	  toggleActions: "play reverse play reverse",
-	  markers: false
-	}
+// subtitle-animation
+gsap.utils.toArray('.ftc-subtitle-1').forEach((subtitle) => {
+    gsap.utils.toArray('.line', subtitle).forEach((el, index) => {
+        let tl1 = gsap.timeline({
+            scrollTrigger: {
+                trigger: subtitle,
+                scrub: 2,
+                start: "top 80%",
+                end: "top 50%",
+                toggleActions: "play none none reverse",
+                markers: false
+            }
+        });
+
+        // Apply the animation to the ".line" element
+        tl1.from(el, {
+            background: "#c4ef17",
+            scaleX: 0,
+            transformOrigin: "left",
+            duration: 1,
+            immediateRender: true
+        });
+    });
 });
-	
-bltahro3.fromTo(".blta-hero-3-bg img" , { scale: 1 ,  duration:1 }, { scale: 2  });
 
-// blta-categories-1-img
-var bltact1 = gsap.timeline({
+// class-add
+const txaaddclass = gsap.utils.toArray('.ftc-add-class');
+txaaddclass.forEach(img => {
+	gsap.to(img, {
+		scrollTrigger: {
+			trigger: img,
+			scrub: 1,
+			start: "top 95%",
+			toggleClass: "active",
+			toggleActions: "play reverse play reverse",
+			markers: false
+		}
+	});
+});
+
+// ftc-about-1
+var ftcabout1 = gsap.timeline({
 
 	scrollTrigger: {
-	  animation: bltact1,
-	  trigger: '.blta-categories-1-img',
+	  animation: ftcabout1,
+	  trigger: '.ftc-about-1-area',
 	  start: "top 80%",
-	  end: "top 30%",
+	  end: "top 50%",
 	  scrub: 2,
 	  toggleActions: "play reverse play reverse",
 	  markers: false
 	}
 });
 	
-bltact1.from( ".blta-categories-1-img img" , { yPercent: -100 , stagger: 0.2 ,  duration:1 } )
+ftcabout1.from(".ftc-about-1-bg-shape-1" , { opacity: 1 ,  duration:1 })
+		 .from(".ftc-about-1-img" , { xPercent: -50, yPercent: -50 ,  duration:2 })
+		 .from(".ftc-about-1-bg-shape-2" , { opacity: 1 ,  duration:1 });
 
-// blta-portfolio-1
-var bltapot1 = gsap.timeline({
+
+
+// ftc-about-1
+var ftcscl3 = gsap.timeline({
 
 	scrollTrigger: {
-	  animation: bltapot1,
-	  trigger: '.blta-portfolio-1-left',
+	  animation: ftcscl3,
+	  trigger: '.ftcscl3',
 	  start: "top 80%",
-	  end: "top 0%",
-	  scrub: 1,
+	  end: "top 50%",
+	  scrub: 2,
 	  toggleActions: "play reverse play reverse",
 	  markers: false
 	}
 });
 	
-bltapot1.fromTo( ".blta-portfolio-1-left" , { rotate: 90 ,  duration:1 } , { rotate: 35} )
-		.fromTo( ".blta-portfolio-1-img-2" , { y: 0 ,  duration:1 }, { y: 80 } , "<" )
-		.fromTo( ".blta-portfolio-1-grid .icon" , { rotate: 0 , scale: 3 ,  duration:1 }, { scale: 1, rotate: 360 } , "<" )
+ftcscl3.from(".ftcscl3" , { scale: 3, rotate: 360 ,  duration:1 })
 
-
-
-// blta-blog-3
-var bltablog1 = gsap.timeline({
+// ftc-campaign-1
+var ftccampaign1 = gsap.timeline({
 
 	scrollTrigger: {
-	  animation: bltablog1,
-	  trigger: '.blta-blog-3-area',
-	  start: "top 0%",
-	  end: "bottom 0%",
-	  scrub: 3,
-	  toggleActions: "play reverse play reverse",
-	  markers: false
-	}
-});
-	
-bltablog1.from( ".blta-blog-3-bg-il" , { xPercent: -100 ,  duration:1 } )
-
-// cta-4
-var bltacta4 = gsap.timeline({
-
-	scrollTrigger: {
-	  animation: bltacta4,
-	  trigger: '.blta-cta-4-area',
+	  animation: ftccampaign1,
+	  trigger: '.ftc-campaign-1-row',
 	  start: "top 90%",
-	  end: "top 40%",
-	  scrub: 1,
+	  end: "top 50%",
+	  scrub: 2,
 	  toggleActions: "play reverse play reverse",
 	  markers: false
 	}
 });
 	
-bltacta4.from( ".blta-cta-4-img" , { yPercent: 100 ,  duration:1 } )
+ftccampaign1.from(".ftc-campaign-1-img" , { scale: 0,  duration:1 })
+			.from(".ftc-campaign-1-card" , { opacity: 0, transform: "rotateY(-90deg)", stagger: .2,  duration:1 })
+
+
+
+
+
+
+// title-animation
+$(window).on('load',function(){
+	var st = $(".ftc-split-text");
+	if(st.length == 0) return;
+	gsap.registerPlugin(SplitText);
+	st.each(function(index, el) {
+	  el.split = new SplitText(el, { 
+		type: "lines,words,chars",
+		linesClass: "split-line"
+	  });
+	
+	  if( $(el).hasClass('ftc-split-threed') ){
+		gsap.set(el.split.chars, {
+		  opacity: 1,
+		  	transformOrigin: "50% 100%",
+		  	transform: "rotateX(90deg)",
+			ease: "elastic.out(1,0.3)",
+			color:'#a249ed',
+			duration: 2.5, 
+		});
+	  }
+	  
+
+	  el.anim = gsap.to(el.split.chars, {
+		scrollTrigger: {
+		  trigger: el,
+		  start: "top 90%",
+		},
+		ease: "elastic.out(1,0.3)",
+		transform: "rotateX(0deg)",
+		color: 'inherit',
+		opacity: 1,
+		duration: 2.5, 
+		stagger: 0.02,
+	  });
+	  
+	});
+})
+
+
 
 
 // hero-1-slider
@@ -490,7 +502,7 @@ if($('.ftc-choose-us-1-client-active').length) {
 		slidesPerView: 6,
 		speed: 3000,
 		autoplay: {
-			delay: 40000000,
+			delay: 4000,
 		},
 	
 		breakpoints: {

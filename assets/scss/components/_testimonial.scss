@@ -35,6 +35,15 @@
             flex: 0 0 auto;
             position: relative;
             z-index: 1;
+            transform: translateY(50%);
+            transition: all 1000ms cubic-bezier(.47,1.64,.41,.8);
+            opacity: 0;
+        }
+
+        .content {
+            transform: translateY(-50%);
+            transition: all 1000ms cubic-bezier(.47,1.64,.41,.8);
+            opacity: 0;
         }
 
         .item-icon {
@@ -129,6 +138,27 @@
         max-width: 1070px;
         position: relative;
         z-index: 1;
+
+        .swiper-container {
+            .swiper-wrapper {
+                .swiper-slide {
+                    &:is(.swiper-slide-active) {
+                        .ftc-testimonial-1-item {
+                            .left {
+                                transform: translateY(0%);
+                                opacity: 1;
+                                transition-delay: .5s;
+                            }
+                            .content {
+                                transform: translateY(0%);
+                                opacity: 1;
+                                transition-delay: .5s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     &-slider-btn {

@@ -24,8 +24,22 @@
 
     &-line {
         width: 100%;
+        transform: scaleX(0);
         height: 2px;
         background: #313030;
+        transition: 2s var(--cube-2);
+
+        &:is(.has-origin-left) {
+            transform-origin: left;
+        }
+
+        &:is(.has-origin-right) {
+            transform-origin: right;
+        }
+
+        &:is(.active) {
+            transform: scaleX(1);
+        }
     }
 
     &-widget-wrap {

@@ -92,9 +92,10 @@
 
     &-counter-item {
         .span-line {
-            width: 100%;
+            width: 0%;
             height: 2px;
             background-color: var(--ftc-heading-1);
+            transition: 2s var(--cube-1);
         }
         .number {
             font-size: 60px;
@@ -109,6 +110,12 @@
             max-width: 250px;
             line-height: 1.2;
 
+        }
+
+        &:is(.active) {
+            .span-line {
+                width: 100%;
+            }
         }
     }
 }

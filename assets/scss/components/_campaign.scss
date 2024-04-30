@@ -24,10 +24,24 @@
         }
     }
 
+    &-card-wrap {
+        perspective: 2000px;
+        transform-style: preserve-3d;
+    }
+
     &-card {
         background: #fff;
         border-radius: 20px;
         padding: 40px 45px;
+
+
+        &:is(.has-origin-left) {
+            transform-origin: 0% 50%;
+        }
+
+        &:is(.has-origin-right) {
+            transform-origin: 100% 50%;
+        }
 
         @media #{$xl,$lg,$xs} {
             padding: 40px 20px;
@@ -64,6 +78,12 @@
 
         .card-disc {
             font-weight: 500;
+        }
+
+        &:hover {
+            .icon {
+                animation: wobble-vertical 1s ease-in-out;
+            }
         }
     }
 

@@ -65,7 +65,7 @@
             font-size: 30px;
             transition: 400ms var(--cube-1);
             text-align: left;
-
+            transform-origin: left;
             @media #{$xs} {
                 font-size: 22px;
             }
@@ -76,6 +76,8 @@
 
             &:hover {
                 color: var(--ftc-pr-1);
+                transform: scaleX(97%);
+           
             }
         }
 

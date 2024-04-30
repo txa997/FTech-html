@@ -40,9 +40,19 @@
     }
 
     &-item {
+
+        perspective: 2000px;
+        transform-style: preserve-3d;
+        transform-origin: 50% 100%;
+
         .item-img {
             height: 323px;
             border-radius: 10px;
+            transition: 400ms var(--cube-2);
+
+            img {
+                transition: 5s;
+            }
         }
 
         .item-date {
@@ -66,14 +76,30 @@
         .item-title {
             font-size: 28px;
             letter-spacing: -.2px;
-            transition: 400ms var(--cube-1);
+            transition: 300ms var(--cube-1);
+
 
             @media #{$lg,$md,$xs} {
                 font-size: 24px;
             }
 
+            a {
+                display: inline-block;
+            }
+
             &:hover {
                 color: var(--ftc-pr-1);
+
+                transform: rotateX(20deg);
+            }
+        }
+
+        &:hover {
+            .item-img {
+                transform: rotateX(15deg);
+                img {
+                    transform: scale(110%);
+                }
             }
         }
         

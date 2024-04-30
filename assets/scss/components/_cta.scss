@@ -16,7 +16,7 @@
         }
     }
     &-social {
-        gap: 10px 35px;
+        gap: 10px 30px;
 
         @media #{$xs} {
             gap: 10px 15px;
@@ -27,8 +27,21 @@
             color: #1e1d1d;
             transition: 400ms var(--cube-1);
 
+
+            .icon {
+                display: inline-block;
+                transform: translateX(10px);
+                opacity: 0;
+                transition: 400ms var(--cube-2);
+            }
+
             &:hover {
                 color: var(--ftc-pr-1);
+
+                .icon {
+                    transform: translateX(0px);
+                    opacity: 1;
+                }
             }
         }
     }

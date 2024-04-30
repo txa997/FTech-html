@@ -74,6 +74,36 @@
     font-size: 19px;
     padding: 16px 47px;
     border-radius: 50px;
+    position: relative;
+    z-index: 1;
+    transition: .4s var(--cube-1);
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        right: 0;
+        top: 0;
+        background: #000;
+        position: absolute;
+        border-radius: 30px;
+        z-index: -1;
+        transition: .4s var(--cube-2);
+        opacity: 0;
+    }
+
+    &:hover {
+        color: #fff;
+
+        &::after {
+            width: 95%;
+            opacity: 1;
+        }
+    }
+
+    &:is(.has-icon) {
+        padding: 16px 30px;
+    }
 }
 /* 
     button-component-end
