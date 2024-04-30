@@ -306,3 +306,126 @@
 /* 
     hero-1-end
 */
+
+
+/* 
+    hero-2-start
+*/
+.ftc-hero-2 {
+    &-area {
+        background-color: #14133D;
+        padding-top: 295px;
+        padding-bottom: 85px;
+
+        @media #{$md,$xs} {
+            padding-top: 200px;
+        }
+    }
+
+    &-content {
+        .subtitle {
+            color: var(--ftc-pr-1);
+            letter-spacing: 9px;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .title {
+            font-size: 90px;
+            line-height: normal;
+            letter-spacing: -2px;
+            max-width: 880px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 25px;
+
+            @media #{$xxl} {
+                font-size: 80px;
+            }
+
+            @media #{$xl} {
+                font-size: 70px;
+            }
+
+            @media #{$lg} {
+                font-size: 66px;
+            }
+
+            @media #{$md} {
+                font-size: 55px;
+            }
+
+            @media #{$xs} {
+                font-size: 30px;
+            }
+
+            @media #{$sm} {
+                font-size: 42px;
+            }
+        }
+
+        .disc {
+            color: #fff;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 28px;
+        }
+    }
+
+    &-item-wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px 25px;
+
+        @media #{$xl,$lg,$md,$xs} {
+            justify-content: center;
+        }
+    }
+
+    &-item {
+        max-width: 228px;
+        height: 228px;
+        border-radius: 50%;
+        position: relative;
+        z-index: 1;
+
+        @media #{$lg,$md,$xs} {
+            max-width: 200px;
+            height: 200px;
+        }
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: #000;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 55%;
+        }
+        
+
+        .item-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            font-size: 20px;
+            letter-spacing: -.2px;
+            font-weight: 700;
+            z-index: 1;
+        }
+
+    }
+    
+    
+}
+
+
+
+/* 
+    hero-2-end
+*/

@@ -163,3 +163,29 @@
  /* 
     project-1-end
  */
+
+/* 
+    project-2-start
+*/
+.ftc-project-2 {
+    &-area {
+        background-color: #14133D;
+    }
+    
+    &-container {
+        max-width: 1714px;
+    }
+
+    &-item-wrap {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1.5fr 1fr;
+    }
+
+    &-item {
+         
+    }
+}
+/* 
+    project-2-end
+*/

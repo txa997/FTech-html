@@ -1,0 +1,22 @@
+/* 
+    brand-1-start
+*/
+
+.ftc-brand-1 {
+    &-area {
+        background-color: #14133D;
+    }
+
+    &-item {
+        padding-bottom: 20px;
+        transform-origin: top left;
+        transition: 200ms var(--cube-2);
+
+        &:hover {
+            transform: rotate(8deg);
+        }
+    }
+}
+/* 
+    brand-1-end
+*/

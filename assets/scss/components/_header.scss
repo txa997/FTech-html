@@ -210,6 +210,134 @@
   header-1-css-end
 */
 
+/* 
+  header-2-css-start
+*/
+.ftc-header-2 {
+
+  &-area {
+    background-color: #14133D;
+    background-color: #14133D;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+  }
+
+  &-container {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 90px;
+
+    @media #{$xxl,$xl,$lg} {
+      padding-left: 15px;
+    }
+
+    @media #{$md,$xs} {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  &-row {
+    @media #{$xs} {
+      padding-top: 15px;
+    }
+    @media #{$sm} {
+      padding-top: 0px;
+    }
+  } 
+
+  &-action-link {
+    gap: 55px;
+
+    @media #{$xxl,$xl,$lg,$md,$xs} {
+      gap: 15px;
+    }
+
+    .ftc-mobile-menu-btn-1  {
+      @media #{$over,$xxxl,$xxl,$xl,$lg} {
+        display: none;
+      }
+    }
+
+    .ftc-phone-btn-1 {
+      @media #{$xl,$lg,$md,$xs} {
+        display: none;
+      }
+    }
+
+    .ftc-search-btn-1 {
+      @media #{$lg,$xs} {
+        display: none !important;
+      }
+    }
+
+    .ftc-btn-1 {
+      @media #{$xs} {
+        display: none ;
+      }
+      @media #{$sm} {
+        display: inline-block ;
+      }
+    }
+
+
+  }
+
+}
+
+.main-navigation {
+  &:is(.has-header-2) {
+    .navbar-nav {
+      li {
+        &:not(:last-child) {
+          margin-right: 40px;
+
+          @media #{$lg} {
+            margin-right: 20px;
+          }
+        }
+
+        &:is(.dropdown) {
+          > a {
+            &::before {
+              content: "\e093";
+              top: 54%;
+            }
+          }
+        }
+
+        a {
+          font-size: 16px;
+          text-transform: uppercase;
+          letter-spacing: -.2px;
+
+
+        }
+
+
+        .dropdown-menu {
+          li {
+            margin-right: 0;
+
+            a {
+              font-weight: 500;
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
+
+/* 
+  header-2-css-end
+*/
+
 
 /* 
   sticky-header-css-start

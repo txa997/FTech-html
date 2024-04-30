@@ -585,6 +585,45 @@ if($('.ftc-testimonial-1-active').length) {
 }
 
 
+  
+// ftc-brand-1-active
+if($('.ftc-brand-1-active').length) {
+	let slider = new Swiper('.ftc-brand-1-active', {
+		loop: true,
+		spaceBetween: 30,
+		slidesPerView: 6,
+		speed: 1000,
+		autoplay: {
+			delay: 5000,
+		},
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			992: {
+				slidesPerView: 4,
+			},
+			1200: {
+				slidesPerView: 5,
+			},
+			1400: {
+				slidesPerView: 6,
+			},
+
+
+		},
+	});
+}
+  
+
+
 // bootstrap-toltip
 $(function () {
 	$('[data-toggle="tooltip"]').tooltip()
