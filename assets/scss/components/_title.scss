@@ -98,6 +98,37 @@
         font-size: 35px;
     }
 
+    &:is(.has-size-65) {
+        font-size: 65px;
+
+        @media #{$xxxl} {
+            font-size: 60px;
+        }
+
+        @media #{$xxl} {
+            font-size: 55px;
+        }
+
+        @media #{$xl} {
+            font-size: 50px;
+        }
+    
+        @media #{$lg} {
+            font-size: 45px;
+        }
+    
+        @media #{$md} {
+            font-size: 40px;
+        }
+        
+        @media #{$xs} {
+            font-size: 30px;
+        }
+        @media #{$sm} {
+            font-size: 35px;
+        }
+    }
+
     &:is(.has-color-white) {
         color: #fff;
     }

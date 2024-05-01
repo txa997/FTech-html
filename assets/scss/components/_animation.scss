@@ -69,3 +69,21 @@
       transform: translateY(0);
   }
 }
+
+@keyframes ftc-up-down-keyfrem {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

@@ -195,3 +195,129 @@
  /* 
     choose-us-1-end
  */
+
+ /* 
+    choose-us-2-start
+ */
+ .ftc-choose-us-2 {
+    &-area {
+        background-color: #14133D;
+    }
+
+    &-img {
+        position: relative;
+
+        &-1 {
+            border-radius: 20px;
+            height: 565px;
+        }
+
+        &-2 {
+            max-width: 390px;
+            height: 420px;
+            border-radius: 20px;
+            position: absolute;
+            right: -100px;
+            bottom: -100px;
+
+            @media #{$md,$xs} {
+                right: 0px;
+            }
+        }
+    }
+
+    &-content {
+        padding-left: 80px;
+        margin-right: -40px;
+
+        @media #{$xxl,$xl,$lg} {
+            margin-right: 0px;
+        }
+
+        @media #{$md,$xs} {
+            padding-left: 0;
+            padding-top: 150px;
+            margin-right: 0px;
+        }
+
+        .inner-div {
+            padding-left: 55px;
+
+            @media #{$xs} {
+                padding-left: 0px;
+            }
+        }
+
+        .inner-div-2 {
+            gap: 25px;
+        }
+
+        &-disc {
+            max-width: 620px;
+            margin-bottom: 35px;
+        }
+
+        .ftc-plybtn-1 {
+            width: 110px;
+            height: 110px;
+            background: #0d0c0e;
+            transition: 400ms var(--cube-1);
+
+            &:hover {
+                background: var(--ftc-pr-1);
+            }
+        }
+    }
+    
+ }
+
+
+ .ftc-progress-1 {
+    &-item {
+        &-title {
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+        &-line {
+            &-bg {
+                width: 100%;
+                height: 28px;
+                overflow: hidden;
+                position: relative;
+                z-index: 1;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 18px;
+                    background: #000;
+                    border-radius: 10px;
+                    bottom: 0;
+                    left: 0;
+                    z-index: -1;
+                }
+
+                &:is(.active ) {
+                    .ftc-progress-1-item-line  {
+                        transform: translateX(0%);
+                    }
+                }
+            }
+        }
+
+        &-line {
+            display: block;
+            height: 18px;
+            background: var(--ftc-pr-1);
+            border-radius: 10px;
+            transform: translateX(-100%);
+            transition: 1s var(--cube-2);
+        }
+    }
+ }
+
+/* 
+    choose-us-2-end
+*/

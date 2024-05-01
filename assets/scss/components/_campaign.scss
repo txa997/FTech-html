@@ -153,3 +153,118 @@
 /* 
     campaign-1-end
 */
+
+/* 
+    campaign-2-start
+*/
+.ftc-campaign-2 {
+    &-area {
+        background-color: #14133D;
+    }
+
+    &-content {
+        margin-right: -30px;
+
+        @media #{$xl,$lg} {
+            margin-right: 0px;
+        }
+
+        @media #{$md,$xs} {
+            padding-top: 50px;
+            margin-right: 0px;
+        }
+    }
+
+    &-feature-wrap {
+        gap: 45px;
+
+        @media #{$lg} {
+            gap: 25px;
+        }
+    }
+
+    &-feature {
+        font-size: 23px;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        max-width: 196px;
+
+        .icon {
+            font-size: 50px;
+            line-height: 0;
+            display: inline-block;
+        }
+
+        &-line {
+            display: inline-block;
+            width: 3px;
+            height: 70px;
+            background: #fff;
+            border-radius: 10px;
+            transform: rotate(140deg);
+        }
+
+        &:hover {
+            .icon {
+                animation: wobble-vertical 1s ease-in-out;
+            }
+        }
+    }
+
+    &-img {
+        padding-right: 30px;
+        position: relative;
+        z-index: 1;
+        margin-left: -320px;
+
+        @media #{$xxxl} {
+            margin-left: -160px;
+        }
+
+        @media #{$xxl} {
+            margin-left: -100px;
+        }
+
+        @media #{$xl,$lg,$md} {
+            margin-left: 0px;
+        }
+
+        @media #{$xs} {
+            margin-left: 0px;
+            padding-right: 0px;
+        }
+
+        &-plugin {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+            width: 27%;
+            animation: ftc-up-down-keyfrem 10s infinite var(--cube-2) ;
+        }
+
+        &-laptop {
+            position: relative;
+            z-index: 1;
+
+            &-screen {
+                position: absolute;
+                top: 5px;
+                z-index: -1;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 79%;
+                height: 95%;
+                overflow: hidden;
+                border-radius: 15px;
+            }
+            
+        }
+    }
+    
+}
+
+/* 
+    campaign-2-end
+*/

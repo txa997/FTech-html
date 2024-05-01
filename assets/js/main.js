@@ -404,7 +404,26 @@ ftccampaign1.from(".ftc-campaign-1-img" , { scale: 0,  duration:1 })
 
 
 
+// ftc-campaign-2
+var ftccampaign2 = gsap.timeline({
 
+	scrollTrigger: {
+	  animation: ftccampaign2,
+	  trigger: '.ftc-campaign-2-area',
+	  start: "top 70%",
+	  end: "bottom 0%",
+	  scrub: 1,
+	  toggleActions: "play reverse play reverse",
+	  markers: false
+	}
+});
+	
+ftccampaign2.fromTo(".ftc-campaign-2-img-laptop-screen img" , { objectPosition: "100% 0%",  duration:1 }, { objectPosition: "100% 100%" , duration:1 })
+
+
+
+
+			
 
 
 // title-animation
