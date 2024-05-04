@@ -179,3 +179,137 @@
     testimonial-1-start
  */
 
+
+/* 
+testimonial-2-start
+*/
+
+
+.ftc-testimonial-2 {
+
+    &-item {
+        display: flex;
+        gap: 35px;
+
+        @media #{$xs} {
+            flex-wrap: wrap;
+        }
+
+        @media #{$sm} {
+            flex-wrap: nowrap;
+        }
+    
+        .item-img  {
+            width: 140px;
+            height: 190px;
+            flex: 0 0 auto;
+            border-radius: 10px;
+        }
+    
+        .item-qoute {
+            font-size: 40px;
+            font-style: italic;
+            margin-bottom: 15px;
+            transform: translateY(-100px);
+            opacity: 0;
+            visibility: hidden;
+            transition: 700ms var(--cube-2);
+
+            @media #{$lg,$md,$xs} {
+                font-size: 30px;
+            }
+        }
+    
+        .item-disc {
+            color: #cccccc;
+            line-height: 28px;
+            margin-bottom: 40px;
+            padding-left: 45px;
+            transform: translateY(-100px);
+            opacity: 0;
+            visibility: hidden;
+            transition: 700ms var(--cube-2);
+
+            @media #{$lg,$md,$xs} {
+                padding-left: 0px;
+            }
+    
+        }
+
+        .item-name {
+            font-size: 18px;
+            padding-left: 45px;
+            transform: translateY(-100px);
+            opacity: 0;
+            visibility: hidden;
+            transition: 700ms var(--cube-2);
+
+            @media #{$lg,$md,$xs} {
+                padding-left: 0px;
+            }
+        }
+    }
+
+    &-slider {
+        padding-top: 120px;
+        margin-left: -90px;
+
+        @media #{$lg,$md,$xs} {
+            margin-left: 0px;
+        }
+
+        .swiper-container {
+            .swiper-wrapper {
+                .swiper-slide {
+                    &:is(.swiper-slide-active) {
+                        .ftc-testimonial-2-item {
+                            .item-qoute {
+                                transform: translateY(0px);
+                                opacity: 1;
+                                visibility: visible;
+                                transition-delay: .3;
+                            }
+                            .item-disc {
+                                transform: translateY(0px);
+                                opacity: 1;
+                                visibility: visible;
+                                transition-delay: .5s;
+                            }
+                            .item-name {
+                                transform: translateY(0px);
+                                opacity: 1;
+                                visibility: visible;
+                                transition-delay: .8s;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    &-slider-btn {
+        gap: 15px;
+
+        .ftc-slider-btn-1 {
+            background: #fff;
+            border: none;
+            color: #000;
+            &:hover {
+                background: var(--ftc-pr-1);
+            }
+        }
+    }
+}
+
+ 
+
+ 
+ 
+ 
+
+/* 
+testimonial-2-end
+*/
+

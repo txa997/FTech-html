@@ -49,3 +49,55 @@
  /* 
     cta-1-end
  */
+
+/* 
+    cta-2-start
+*/
+ .ftc-contact-1 {
+    &-area {
+        background-color: #14133D;
+        position: relative;
+        z-index: 1;
+    }
+
+    &-scn-title {
+        max-width: 540px;
+    }
+
+    &-content {
+        background: #1C1B1B;
+    }
+ }
+
+.ftc-form-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 35px;
+
+    .input-item {
+        &:is(.has-full-width) {
+            grid-column: 1 / -1;
+        }
+    }
+
+    input , textarea {
+        width: 100%;
+        background: transparent;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #302e2e;
+        font-size: 17px;
+        color: #fff;
+        font-weight: 700;
+        font-family: var(--ftc-pr-font);
+        padding-bottom: 12px;
+    }
+
+    textarea {
+        height: 105px;
+    }
+}
+
+/* 
+    cta-2-end
+*/

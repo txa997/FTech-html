@@ -607,6 +607,26 @@ if($('.ftc-testimonial-1-active').length) {
 	});
 }
 
+  
+// testimonial-1-slider
+if($('.ftc-testimonial-2-active').length) {
+	let slider = new Swiper('.ftc-testimonial-2-active', {
+		loop: true,
+		spaceBetween: 30,
+		slidesPerView: 1,
+		speed: 1000,
+		autoplay: {
+			delay: 5000,
+		},
+
+		navigation: {
+			nextEl: ".ftc_testimonial_2_next",
+			prevEl: ".ftc_testimonial_2_prev",
+		},
+	
+	});
+}
+
 
   
 // ftc-brand-1-active
@@ -644,7 +664,27 @@ if($('.ftc-brand-1-active').length) {
 		},
 	});
 }
-  
+
+
+// team-2-hover-active
+$(".ftc-t1-active-toggle").on("mouseover", function(){
+	var current_class = document.getElementsByClassName("ftc-t1-active-toggle active");
+	current_class[0].className = current_class[0].className.replace(" active", "");
+	this.className += " active";
+});
+
+$(".ftc-t1-active-toggle-2").on("mouseover", function(){
+	var current_class = document.getElementsByClassName("ftc-t1-active-toggle-2 active");
+	current_class[0].className = current_class[0].className.replace(" active", "");
+	this.className += " active";
+});
+
+// price-2
+$(".ftc-price-2-item").on("mouseover", function(){
+	var current_class = document.getElementsByClassName("ftc-price-2-item active");
+	current_class[0].className = current_class[0].className.replace(" active", "");
+	this.className += " active";
+});
 
 
 // bootstrap-toltip

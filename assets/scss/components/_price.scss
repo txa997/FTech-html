@@ -284,6 +284,193 @@
 }
 
 
- /* 
-    price-1-end
- */
+/* 
+price-1-end
+*/
+
+/* 
+price-2-start
+*/
+.ftc-price-2 {
+    &-area {
+        background-color: #14133D;
+    }
+
+    &-scn-title {
+        max-width: 680px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &-item-wrap {
+        margin-left: -40px;
+
+        @media #{$xl,$lg,$md,$xs} {
+            margin-left: 0px;
+        }
+    }
+
+    &-item {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 70px;
+        padding: 45px  0;
+        position: relative;
+        z-index: 1;
+
+        @media #{$xl,$lg} {
+            gap: 30px;
+        }
+
+        @media #{$md,$xs} {
+            gap: 30px;
+            grid-template-columns: auto ;
+        }
+
+        &:not(:last-child) {
+            &::after {
+                content: "";
+                width: calc(100% - 360px) ;
+                height: 2px;
+                background-color: #392445;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+
+                @media #{$md,$xs} {
+                    width: calc(100%) ;
+                }
+                
+            }
+        }
+
+
+        .item-img {
+            width: 290px;
+            position: relative;
+            z-index: 1;
+
+            &::after {
+                content: "";
+                width: 170px;
+                height: 2px;
+                background: #fff;
+                position: absolute;
+                right: -40px;
+                top: 50%;
+                transform: translateY(-50%) scaleX(0);
+                transform-origin: right;
+                transition: 500ms var(--cube-2);
+
+                @media #{$xl,$lg} {
+                    width: 70px;
+                    right: -20px;
+                }
+
+                @media #{$md,$xs} {
+                    display: none;
+                }
+            }
+
+            &-posi {
+                width: 100%;
+                height: 510px;
+                border-radius: 146px;
+                position: absolute;
+                top: -100px;
+                left: 0;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+                transition: 1s var(--cube-2);
+
+                @media #{$xl,$lg} {
+                    height: 420px;
+                }
+
+                @media #{$md,$xs} {
+                    position: unset;
+                    border-radius: 30px;
+                    height: 400px;
+                }
+            }
+        }
+
+        .content {
+            gap: 30px;
+
+            @media #{$xs} {
+                flex-wrap: wrap;
+            }
+
+            @media #{$sm} {
+                flex-wrap: nowrap;
+            }
+        }
+
+        .item-title {
+            font-size: 28px;
+            letter-spacing: -1px;
+            flex: 0 0 auto;
+            width: 245px;
+
+            @media #{$lg,$md,$xs} {
+                font-size: 22px;
+                width: 185px;
+
+            }
+        }
+
+        .item-disc {
+            display: flex;
+            gap: 10px;
+            color: #fff;
+        
+            .icon {
+                display: inline-block;
+                margin-top: 2px;
+            }
+            
+        }
+
+        .item-price {
+            font-size: 30px;
+        }
+
+        &:is(.active) {
+
+            .item-img {
+                &::after {
+                    transform: translateY(-50%) scaleX(1);
+                }
+    
+                &-posi {
+                    top: -45px;
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+                }
+                
+            }
+        }
+
+
+        &:not(.active) {
+            @media #{$md,$xs} {
+                .item-img {
+                    &::after {
+                        transform: translateY(-50%) scaleX(1);
+                    }
+        
+                    &-posi {
+                        top: -45px;
+                        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+                    }
+                } 
+            }
+
+        }
+    }
+}
+
+
+
+/* 
+price-2-end
+*/
