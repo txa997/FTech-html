@@ -117,6 +117,23 @@ input:focus::placeholder, textarea:focus::placeholder {
   opacity: 0;
 }
 
+@media (min-width: 1800px), only screen and (min-width: 1600px) and (max-width: 1799px), only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  ::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--ftc-pr-1);
+    border-radius: 30px;
+  }
+}
 /* 
     global-css-start
 */

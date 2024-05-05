@@ -98,6 +98,27 @@ input:focus::placeholder, textarea:focus::placeholder {
     opacity: 0;
 }
 
+
+@media #{$over,$xxxl,$xxl,$xl,$lg,$md} {
+    ::-webkit-scrollbar {
+        width: 5px;
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+    }
+        
+    ::-webkit-scrollbar-track {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    }
+        
+    ::-webkit-scrollbar-thumb {
+    background: var(--ftc-pr-1);
+    border-radius: 30px;
+    }
+}
+
 /* 
     global-css-start
 */
@@ -105,6 +126,9 @@ input:focus::placeholder, textarea:focus::placeholder {
 /* 
     margin-&-padding_veriable-start
 */
+
+
+
 
 @for $i from 1 through 40 {
     .mt-#{5 * $i}{margin-top: 5px * $i;}
