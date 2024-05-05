@@ -159,7 +159,18 @@
 */
 .ftc-campaign-2 {
     &-area {
-        background-color: #14133D;
+        background: transparent;
+        position: relative;
+        z-index: 1;
+    }
+
+    &-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 32px);
+        z-index: -1;
     }
 
     &-content {

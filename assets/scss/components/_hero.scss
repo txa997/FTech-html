@@ -313,7 +313,7 @@
 */
 .ftc-hero-2 {
     &-area {
-        background-color: #14133D;
+        background: transparent;
         padding-top: 295px;
         padding-bottom: 85px;
 
@@ -390,6 +390,7 @@
         border-radius: 50%;
         position: relative;
         z-index: 1;
+        transition: .5s var(--cube-1);
 
         @media #{$lg,$md,$xs} {
             max-width: 200px;
@@ -405,6 +406,7 @@
             top: 0;
             left: 0;
             opacity: 55%;
+            transition: .5s var(--cube-1);
         }
         
 
@@ -417,6 +419,19 @@
             letter-spacing: -.2px;
             font-weight: 700;
             z-index: 1;
+            transition: .4s var(--cube-2);
+        }
+
+        &:hover {
+            transform: scale(95%);
+            .item-title {
+                transform: translate(-50% , -50%) scale(3);
+                opacity: 0;
+            }
+
+            &::after {
+                opacity: 0;
+            }
         }
 
     }

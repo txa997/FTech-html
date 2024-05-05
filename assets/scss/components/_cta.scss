@@ -55,9 +55,9 @@
 */
  .ftc-contact-1 {
     &-area {
-        background-color: #14133D;
+        background: transparent;
         position: relative;
-        z-index: 1;
+        z-index: 2;
     }
 
     &-scn-title {
@@ -65,7 +65,62 @@
     }
 
     &-content {
-        background: #1C1B1B;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: relative;
+        z-index: 1;
+        align-items: end;
+        padding-left: 125px;
+        margin-top: -158px;
+
+        @media #{$lg} {
+            margin-top: 0px;
+            padding-left: 50px;
+        }
+
+        @media #{$md,$xs} {
+            margin-top: 0px;
+            padding-left: 0px;
+            grid-template-columns: 1fr;
+            padding: 100px 30px;
+            padding-bottom: 0;
+        }
+
+
+        &-bg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 160px);
+            background: #1C1B1B;
+            z-index: -1;
+            border-radius: 60px;
+
+            @media #{$lg} {
+                height: calc(100% - 0px); 
+            }
+
+            @media #{$md,$xs} {
+                height: calc(100% - 0px); 
+                border-radius: 30px;
+            }
+
+            .il-img {
+                position: absolute;
+                top: -170px;
+                left: -170px;
+                width: 30%;
+            }
+        }
+    }
+
+    &-img {
+        border-radius: 0 0 60px 0;
+
+        @media #{$md,$xs} {
+            border-radius: 0 0 0px 0;
+        }
     }
  }
 
@@ -73,6 +128,21 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px 35px;
+    margin-bottom: 120px;
+
+    @media #{$xl,$lg,$md} {
+        margin-bottom: 40px;
+    }
+
+    @media #{$xs} {
+        margin-bottom: 40px;
+        grid-template-columns: 1fr;
+    }
+
+    @media #{$sm} {
+        margin-bottom: 40px;
+        grid-template-columns: 1fr 1fr;
+    }
 
     .input-item {
         &:is(.has-full-width) {
@@ -95,6 +165,12 @@
 
     textarea {
         height: 105px;
+    }
+
+    .ftc-form-1-btn {
+        width: 100%;
+        border: none;
+        outline: none;
     }
 }
 

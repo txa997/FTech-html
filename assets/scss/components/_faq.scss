@@ -4,11 +4,23 @@
 */
 .ftc-faq-1  {
     &-area {
-        background-color: #14133D;
+        background: transparent;
+        position: relative;
+        z-index: 1;
+
 
         @media #{$md,$xs} {
             padding-bottom: 140px;
         }
+    }
+
+    &-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 110px);
+        z-index: -1;
     }
 
     &-left {
@@ -46,6 +58,7 @@
             justify-content: space-between;
             width: 100%;
             padding: 20px 0;
+            transition: 200ms var(--cube-1);
 
             @media #{$xs} {
                 font-size: 18px;
@@ -56,6 +69,10 @@
                 font-size: 18px;
                 color: #FF3838;
                 transition: 500ms var(--cube-2);
+            }
+
+            &:hover {
+                color: var(--ftc-pr-1);
             }
     
             &:is(:not(.collapsed)) {

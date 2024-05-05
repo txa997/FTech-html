@@ -4,7 +4,7 @@
 
 .ftc-special-1 {
     &-area {
-        background-color: #14133D;
+        background: transparent;
     }
     &-scn-title {
         max-width: 640px;
@@ -143,8 +143,27 @@
         }
 
         .item-img {
+            perspective: 2000px;
+            transform-style: preserve-3d;
+
             @media #{$md,$xs} {
                 margin-top: 50px;
+            }
+
+            img {
+                transition: 1s;
+                transform-origin: right;
+                transform: rotateY(-102deg);
+            }
+        }
+
+        .tab-pane {
+            &:is(.show) {
+                .item-img {
+                    img {
+                        transform: rotateY(0deg);
+                    }
+                }
             }
         }
     }

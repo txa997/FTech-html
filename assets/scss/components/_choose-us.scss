@@ -201,7 +201,7 @@
  */
  .ftc-choose-us-2 {
     &-area {
-        background-color: #14133D;
+        background: transparent;
     }
 
     &-img {
@@ -262,6 +262,10 @@
             height: 110px;
             background: #0d0c0e;
             transition: 400ms var(--cube-1);
+
+            img {
+                animation: ftc-roteted 10s infinite linear;
+            }
 
             &:hover {
                 background: var(--ftc-pr-1);

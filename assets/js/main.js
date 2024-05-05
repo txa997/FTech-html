@@ -31,9 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
 			preloader.classList.add("preloaded");
 			setTimeout(function () {
 				  preloader.remove();
-
-
-
 	  
 			  }, 1000 ) ;
 		}
@@ -51,6 +48,17 @@ document.addEventListener("DOMContentLoaded", function () {
 			.from(".ftc-hero-1-content .title  " , {  transform: "rotateX(47deg) translateY(-200px)" , transformOrigin: "50% 0%",duration:1.5, ease: "bounce.out", opacity:0 }, "<.3")
 			.from(".ftc-hero-1-content .subtitle  " , {  transform: "rotateX(47deg) translateY(-200px)" , transformOrigin: "50% 0%",duration:1.5, ease: "bounce.out", opacity:0 }, "<.3");
 
+		// hero-2-animation
+		const h2tl = gsap.timeline();
+
+		h2tl.from(".ftc-hero-2-item-wrap .item-3-ani " , { scale: 0,	duration:2, ease: "ease", opacity:0 })
+		h2tl.from(".ftc-hero-2-item-wrap .item-2-ani " , { xPercent: -100,	duration:1, ease: "bounce.out", opacity:0 }, "<1" )
+		h2tl.from(".ftc-hero-2-item-wrap .item-1-ani " , { xPercent: -100,	duration:1, ease: "bounce.out", opacity:0 }, "<.5")
+		h2tl.from(".ftc-hero-2-item-wrap .item-4-ani " , { xPercent: 100,	duration:1, ease: "bounce.out", opacity:0 }, "1" )
+		h2tl.from(".ftc-hero-2-item-wrap .item-5-ani " , { xPercent: 100,	duration:1, ease: "bounce.out", opacity:0 }, "1.5" )
+		h2tl.from(".ftc-hero-2-content .title " , {  transform: "rotateX(47deg) translateY(-200px)" , transformOrigin: "50% 0%",		duration:1.5, ease: "bounce.out", opacity:0 }, "<")
+		h2tl.from(".ftc-hero-2-content .subtitle " , {  transform: "rotateX(47deg) translateY(-200px)" , transformOrigin: "50% 0%",		duration:1.5, ease: "bounce.out", opacity:0 }, "<.1")
+			
 
 	})
 
@@ -130,44 +138,43 @@ if (menuToggle2) {
 		display: "block",
 		ease: 'Expo.easeInOut'
 	});
-	menubgline.to('.mobile-menu-bg span' , {
+	menubgline.from('.mobile-menu-bg span' , {
 		duration: .5,
-		height: "100%",
+		width: 100,
 		stagger: 0.1,
 		ease: 'Expo.easeInOut'
 	});
 	menubgline.from('.mobile-menu-logo' , {
-		x: -50,
+		xPercent: -50,
 		opacity: 0,
-		ease: 'Expo.easeInOut'
+		ease: 'Expo.easeInOut',
+		duration: 1,
 	});
-	menubgline.to('.mobile-menu-close' , {
-		duration: 0,
-		x: 0,
-		rotate: 0,
-		opacity: 1,
-		ease: 'Expo.easeInOut'
+	menubgline.from('.mobile-menu-close' , {
+		duration: 1,
+		xPercent: 50,
+		rotate: 360,
+		ease: 'Expo.easeInOut',
+		opacity: 0,
+
 	}, "<");
-	menubgline.fromTo('.mobile-main-navigation  ul li' , {
+	
+	menubgline.from('.mobile-main-navigation  ul li' , {
+		duration: .5,
 		opacity: 0,
 		y: 50,
-		ease: 'Expo.easeInOut',
-		stagger: 0.2,
-	} , {
-		opacity: 1,
-		y: 0,
-	}, "<");
+		stagger: .01,
+	},"<");
+
 	menubgline.from('.mobile-menu-search-bar' , {
 		opacity: 0,
 		y: 50,
-		ease: 'Expo.easeInOut'
-	}, "<");
+	}, "<.5");
 
 	menubgline.from('.mobile-menu-socail-link' , {
 		opacity: 0,
 		x: 50,
-		ease: 'Expo.easeInOut'
-	}, "<");
+	});
 
 	
 	menubgline.reverse();
@@ -203,7 +210,17 @@ gsap.utils.toArray(".image-pllx").forEach(function(container) {
       }); 
 });
 
+const boxes = gsap.utils.toArray('.ftcfadeup');
 
+boxes.forEach((box, i) => {
+  const anim = gsap.fromTo(box, {autoAlpha: 0, y: 50}, {duration: 1, autoAlpha: 1, y: 0});
+  ScrollTrigger.create({
+    trigger: box,
+    animation: anim,
+    toggleActions: 'play none none reverse',
+    once: false,
+  });
+});
 
 
 // ftc-fade-left
@@ -256,6 +273,24 @@ gsap.utils.toArray('.ftc-fade-down').forEach((container, index) => {
     });
 
     tl1.from(images, { opacity: 0, yPercent: -100,  filter: "blur(30px)", stagger: 0.2, duration: 1 });
+});
+
+// ftc-fade-up
+gsap.utils.toArray('.ftc-fade-up').forEach((container, index) => { 
+    let images = gsap.utils.toArray(container.querySelectorAll('img'));
+
+    let tl1 = gsap.timeline({
+        scrollTrigger: {
+            trigger: container,
+            scrub: 2,
+            start: "top 70%",
+            end: "top 50%",
+            toggleActions: "play none none reverse",
+            markers: false
+        }
+    });
+
+    tl1.from(images, { opacity: 0, yPercent: 100,  filter: "blur(30px)", stagger: 0.2, duration: 1 });
 });
 
 
@@ -821,6 +856,7 @@ if($('.nice-select').length) {
 
 // parallax-img
 $('.parallax-img').parallaxie({  
+	speed: 0.5,    
 });
 
 })(jQuery);
