@@ -444,3 +444,187 @@
 /* 
     hero-2-end
 */
+
+/* 
+    hero-3-start
+*/
+.ftc-hero-3 {
+    &-area {
+        background-color: #020514;
+        padding-top: 290px;
+        padding-bottom: 235px;
+        position: relative;
+        z-index: 1;
+
+        @media #{$md,$xs} {
+            padding-top: 220px;
+            padding-bottom: 155px;
+        }
+    }
+
+    &-bg {
+        &-shape-cube {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: -3;
+            height: 100%;
+        }
+
+
+        &-earth {
+            position: absolute;
+            bottom: -74%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 130%;
+            z-index: -2;
+            opacity: .7;
+
+            @media #{$xxxl} {
+                width: 160%;
+            }
+
+            @media #{$xxl} {
+                width: 180%;
+            }
+
+            @media #{$xl} {
+                width: 200%;
+            }
+
+            @media #{$lg} {
+                width: 220%;
+            }
+
+            @media #{$md} {
+                width: 180%;
+                bottom: -60%;
+            }
+
+            @media #{$xs} {
+                width: 200%;
+                bottom: 0%;
+            }
+            @media #{$sm} {
+                width: 250%;
+                bottom: -74%;
+            }
+        }
+        
+        &-shadow-1 {
+            position: absolute;
+            bottom: 12%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            z-index: -1;
+        }
+
+        &-shadow-2 {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            z-index: -1;
+        }
+
+        &-svg-1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        &-svg-2 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+        }
+    }
+
+    &-title {
+       font-size: 80px; 
+       line-height: 1.12;
+       margin-bottom: 35px;
+
+
+
+        @media #{$lg} {
+            font-size: 70px;
+        }
+
+        @media #{$md} {
+            font-size: 60px;
+        }
+
+        @media #{$xs} {
+            font-size: 30px;
+        }
+
+        @media #{$sm} {
+            font-size: 42px;
+        }
+    }
+
+    &-disc {
+        font-size: 20px;
+        line-height: 32px;
+        max-width: 1245px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 155px;
+
+        @media #{$md,$xs} {
+            margin-bottom: 65px;
+        }
+    }
+
+    &-subtitle {
+        font-size: 70px;
+        text-align: left;
+        max-width: 700px;
+        margin-bottom: 43px;
+
+        @media #{$xl} {
+            font-size: 70px;
+        }
+
+        @media #{$lg} {
+            font-size: 60px;
+        }
+
+        @media #{$md} {
+            font-size: 50px;
+        }
+
+        @media #{$xs} {
+            font-size: 30px;
+        }
+
+        @media #{$sm} {
+            font-size: 40px;
+        }
+    }
+
+    &-disc-2 {
+        max-width: 430px;
+        text-align: right;
+        margin-left: auto;
+    }
+
+    &-btn {
+        margin-bottom: 465px;
+
+        @media #{$md,$xs} {
+            margin-bottom: 105px;
+        }
+    }
+    
+}
+/* 
+    hero-3-end
+*/

@@ -23,6 +23,12 @@
 }
 
 
+.ftc-gd-font {
+  background: var(--ftc-gd-1);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @-webkit-keyframes wobble-vertical {
   16.65% {
     -webkit-transform: translateY(8px);

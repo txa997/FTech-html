@@ -342,34 +342,110 @@
 */
 .ftc-header-3 {
   &-area {
-    background: #020513;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    z-index: 5;
   }
+
+  &-action-link {
+    gap: 20px;
+
+    .ftc-mobile-menu-btn-1 {
+      @media #{$over,$xxxl,$xxl,$xl,$lg} {
+        display: none;
+      }
+    }
+
+    .ftc-btn-1 {
+      @media #{$xs} {
+        display: none;
+      }
+      @media #{$sm} {
+        display: inline-block;
+      }
+    }
+
+  }
+
 }
 
 
 .main-navigation {
   &:is(.has-header-3) {
+    border: 1px solid rgb(255 255 255 / 30%);
+    border-radius: 10px;
+    padding: 0 30px;
+
+    @media #{$lg} {
+      padding: 0 20px;
+    }
+
     .navbar-nav {
       li {
+
+        &:not(:last-child) {
+          margin-right: 55px;
+
+          @media #{$lg} {
+            margin-right: 20px;
+          }
+        }
+
         a {
-          position: relative;
-          z-index: 1;
           font-family: var(--saira);
           font-size: 18px;
           font-weight: 400;
-          text-decoration: none;
           color: #fff;
-          padding: 23px 0;
-          display: inline-block;
-          text-transform: capitalize;
-          line-height: 1;
-          transition: 400ms var(--cube-1);
+          padding: 26px 0;
+
+          &::after {
+            background-color: var(--ftc-pr-2);
+          }
         }
+
+        &:is(.dropdown) {
+          > a {
+            padding-right: 12px;
+            &::before {
+              content: "\f0d7";
+              font-size: 12px;
+              top: 48%;
+            }
+          }
+        }
+
+        &:hover {
+          > a {
+            color: var(--ftc-pr-2);
+          }
+        }
+
+        .dropdown-menu {
+          border-top: 1px solid var(--ftc-pr-2);
+
+          li {
+            margin-right: 0;
+
+            a {
+              font-weight: 400;
+              &::after {
+                background-color: var(--ftc-pr-2);
+              }
+            }
+            &:hover {
+              > a {
+                color: var(--ftc-pr-2);
+              }
+            }
+          }
+        }
+
       }
     }
   }
 }
-.main-navigation 
 /* 
   header-3-css-end
 */

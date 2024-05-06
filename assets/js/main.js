@@ -60,6 +60,15 @@ document.addEventListener("DOMContentLoaded", function () {
 		h2tl.from(".ftc-hero-2-content .subtitle " , {  transform: "rotateX(47deg) translateY(-200px)" , transformOrigin: "50% 0%",		duration:1.5, ease: "bounce.out", opacity:0 }, "<.1")
 			
 
+		// hero-3-animation
+		const h3tl = gsap.timeline();
+
+		h3tl.from(".ftc-hero-3-bg-svg-1 svg path" , { xPercent: -50, transformOrigin: "left", stagger: -.05,	duration:2.5, ease: "ease", })
+		.from(".ftc-hero-3-bg-svg-2 svg path" , { xPercent: 50, transformOrigin: "left", stagger: -.05,	duration:2.5, ease: "ease", }, "<=")
+		.from(".ftc-hero-3-disc " , {  transform: "rotateX(47deg) translateY(-200px)" , transformOrigin: "50% 0%",		duration:1.5, ease: "bounce.out", opacity:0 }, "<=1" )
+		.from(".ftc-hero-3-title " , {  transform: "rotateX(47deg) translateY(-200px)" , transformOrigin: "50% 0%",		duration:1.5, ease: "bounce.out", opacity:0 }, "<=.5")
+
+
 	})
 
 });
@@ -458,6 +467,26 @@ var ftccampaign2 = gsap.timeline({
 });
 	
 ftccampaign2.fromTo(".ftc-campaign-2-img-laptop-screen img" , { objectPosition: "100% 0%",  duration:1 }, { objectPosition: "100% 100%" , duration:1 })
+
+
+// ftc-hero-3
+var ftchero3 = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: ftchero3,
+	  trigger: '.ftc-hero-3-area',
+	  start: "top 0%",
+	  end: "bottom 0%",
+	  scrub: 1,
+	  toggleActions: "play reverse play reverse",
+	  markers: false
+	}
+});
+	
+ftchero3.to(".ftc-hero-3-bg-svg-1 svg path" , { xPercent: -50, transformOrigin: "left", stagger: -.05,	duration:1, ease: "ease", })
+.to(".ftc-hero-3-bg-svg-2 svg path" , { xPercent: 50, transformOrigin: "left", stagger: -.05,	duration:1, ease: "ease", }, "<=")
+.to(".ftc-hero-3-bg-svg-2 svg path" , { xPercent: 50, transformOrigin: "left", stagger: -.05,	duration:1, ease: "ease", }, "<=")
+.from(".ftc-hero-3-bg-earth" , { yPercent: 50, width: "150%", rotate: 300,	duration:1, ease: "ease", }, "<=")
 
 
 
