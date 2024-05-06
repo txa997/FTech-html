@@ -477,6 +477,15 @@ price-2-start
             }
 
         }
+
+        &:nth-last-child(1) {
+            .item-img {
+                &-posi {
+                    top: unset;
+                    bottom: -50px;
+                }
+            }
+        }
     }
 }
 

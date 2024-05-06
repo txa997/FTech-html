@@ -462,9 +462,6 @@ ftccampaign2.fromTo(".ftc-campaign-2-img-laptop-screen img" , { objectPosition: 
 
 
 
-			
-
-
 // title-animation
 $(window).on('load',function(){
 	var st = $(".ftc-split-text");
