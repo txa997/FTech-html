@@ -85,6 +85,11 @@
         height: 2px;
         background: var(--ftc-gd-1);
         flex: 0 0 auto;
+        transform-origin: left;
+
+        &:is(.has-origin-right) {
+            transform-origin: right;
+        }
     }
 
 }
@@ -204,6 +209,10 @@
         }
         @media #{$sm} {
             font-size: 35px;
+        }
+
+        &:is(.has-color-white) {
+            color: #fff;
         }
     }
 

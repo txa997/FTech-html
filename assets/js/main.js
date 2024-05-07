@@ -249,6 +249,7 @@ gsap.utils.toArray('.ftc-fade-left').forEach((el, index) => {
 	.from(el, { opacity: 1 , xPercent: -100 }, {opacity: 1, duration: 1, immediateRender: false})
 })
 
+
 // ftc-fade-right
 gsap.utils.toArray('.ftc-fade-right').forEach((el, index) => { 
 	let tl1 = gsap.timeline({
@@ -357,6 +358,24 @@ gsap.utils.toArray('.ftc-clip-left').forEach((el, index) => {
 })
 
 
+// ftc-scale-3
+gsap.utils.toArray('.ftc-scale-3').forEach((el, index) => { 
+	let tl1 = gsap.timeline({
+	  scrollTrigger: {
+		trigger: el,
+		scrub: 1,
+		start: "top 0%",
+		end: "bottom 0%",
+		toggleActions: "play none none reverse",
+		 markers: false
+	  }
+	})
+	
+	tl1
+	.from(el, { scale: 3 }, {opacity: 1, duration: 1, immediateRender: false})
+})
+
+
 // subtitle-animation
 gsap.utils.toArray('.ftc-subtitle-1').forEach((subtitle) => {
     gsap.utils.toArray('.line', subtitle).forEach((el, index) => {
@@ -376,6 +395,29 @@ gsap.utils.toArray('.ftc-subtitle-1').forEach((subtitle) => {
             background: "#c4ef17",
             scaleX: 0,
             transformOrigin: "left",
+            duration: 1,
+            immediateRender: true
+        });
+    });
+});
+
+// subtitle-2-animation
+gsap.utils.toArray('.ftc-subtitle-2').forEach((subtitle) => {
+    gsap.utils.toArray('.line', subtitle).forEach((el, index) => {
+        let tl1 = gsap.timeline({
+            scrollTrigger: {
+                trigger: subtitle,
+                scrub: 2,
+                start: "top 80%",
+                end: "top 50%",
+                toggleActions: "play none none reverse",
+                markers: false
+            }
+        });
+
+        // Apply the animation to the ".line" element
+        tl1.from(el, {
+            scaleX: 0,
             duration: 1,
             immediateRender: true
         });
@@ -487,6 +529,42 @@ ftchero3.to(".ftc-hero-3-bg-svg-1 svg path" , { xPercent: -50, transformOrigin: 
 .to(".ftc-hero-3-bg-svg-2 svg path" , { xPercent: 50, transformOrigin: "left", stagger: -.05,	duration:1, ease: "ease", }, "<=")
 .to(".ftc-hero-3-bg-svg-2 svg path" , { xPercent: 50, transformOrigin: "left", stagger: -.05,	duration:1, ease: "ease", }, "<=")
 .from(".ftc-hero-3-bg-earth" , { yPercent: 50, width: "150%", rotate: 300,	duration:1, ease: "ease", }, "<=")
+
+
+
+// ftc-services-3
+var ftcservices3 = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: ftcservices3,
+	  trigger: '.ftc-services-3-card-wrap',
+	  start: "top 90%",
+	  end: "top 30%",
+	  scrub: 1,
+	  toggleActions: "play reverse play reverse",
+	  markers: false
+	}
+});
+	
+ftcservices3.fromTo(".ftc-services-3-card" , { y: 200 , }, { y: 0 , stagger: 1 })
+
+
+
+// ftc-team-3
+var ftcteam3 = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: ftcteam3,
+	  trigger: '.ftc-team-3-membar-wrap',
+	  start: "top 90%",
+	  end: "top 30%",
+	  scrub: 1,
+	  toggleActions: "play reverse play reverse",
+	  markers: false
+	}
+});
+	
+ftcteam3.fromTo(".ftc-team-3-membar" , { xPercent: -100 , }, { xPercent: 0 , duration:2.5, ease: "ease"  , stagger: 1 })
 
 
 
@@ -743,6 +821,13 @@ $(".ftc-t1-active-toggle-2").on("mouseover", function(){
 // price-2
 $(".ftc-price-2-item").on("mouseover", function(){
 	var current_class = document.getElementsByClassName("ftc-price-2-item active");
+	current_class[0].className = current_class[0].className.replace(" active", "");
+	this.className += " active";
+});
+
+// services-3
+$(".ftc-services-3-card").on("mouseover", function(){
+	var current_class = document.getElementsByClassName("ftc-services-3-card active");
 	current_class[0].className = current_class[0].className.replace(" active", "");
 	this.className += " active";
 });

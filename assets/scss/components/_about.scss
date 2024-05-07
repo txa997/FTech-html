@@ -123,3 +123,154 @@
  /* 
     about-1-end
  */
+
+ /* 
+    about-3-start
+ */
+.ftc-about-3 {
+    &-area {
+        background-color: #E6E9F2;
+    }
+    
+    &-row {
+        display: grid;
+        grid-template-columns: .9fr 1fr;
+        gap: 35px;
+        margin-right: -70px;
+
+        @media #{$xxl,$xl} {
+            margin-right: 0px;
+        }
+
+        @media #{$lg} {
+            margin-right: 0px;
+            grid-template-columns: 1fr 1.5fr;
+        }
+
+        @media #{$md,$xs} {
+            margin-right: 0px;
+            grid-template-columns: 1fr ;
+        }
+    }
+
+    &-img {
+        border-radius: 10px;
+        height: 725px;
+        margin-right: 40px;
+
+        @media #{$lg,$md,$xs} {
+            margin-right: 0px;
+            height: 450px;
+        }
+    }
+
+    &-feature-wrap {
+        gap: 40px;
+
+        @media #{$lg} {
+            flex-wrap: wrap;
+        }
+
+        @media #{$md} {
+            flex-wrap: nowrap;
+        }
+
+        @media #{$xs} {
+            flex-wrap: wrap;
+        }
+
+        @media #{$sm} {
+            flex-wrap: nowrap;
+        }
+    }
+
+    &-feature {
+
+
+        .icon {
+            width: 120px;
+            height: 120px;
+            background: #D2DBF5;
+            border-radius: 50%;
+            font-size: 65px;
+        }
+
+        .title {
+            font-size: 24px;
+            line-height: 1.41;
+            margin-bottom: 8px;
+        }
+
+        .disc {
+            font-size: 16px;
+            line-height: 26px;
+            color: #4B535B;
+        }
+
+        &:hover {
+            .icon {
+                i {
+                    animation: wobble-vertical 1s ease-in-out;
+                }
+            }
+        }
+    }
+
+    &-right {
+        padding-top: 30px;
+    }
+
+    &-content {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 60px;
+        align-items: center;
+
+        @media #{$xl,$lg} {
+            gap: 30px;
+        }
+
+        @media #{$xs} {
+            grid-template-columns: 1fr ;
+            gap: 40px;
+        }
+
+        @media #{$sm} {
+            grid-template-columns: 1fr auto;
+            gap: 60px;
+        }
+    }
+
+    &-expri {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 150px;
+        padding: 38px 0;
+        border-radius: 95px;
+
+        .number {
+            font-size: 55px;
+            color: var(--ftc-pr-2);
+            line-height: 1;
+            writing-mode: vertical-lr;
+
+        }
+        .disc {
+            font-size: 19px;
+            color: #fff;
+            writing-mode: vertical-lr;
+        }
+    }
+
+    &-img-2 {
+        height: 475px;
+        border-radius: 500px;
+    }
+    
+}
+
+
+/* 
+    about-3-end
+*/

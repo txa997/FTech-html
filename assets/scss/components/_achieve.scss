@@ -59,3 +59,59 @@
 /* 
     achieve-1-end
 */
+
+/* 
+    achieve-2-start
+*/
+.ftc-achieve-counter-3 {
+    &-area {
+        background: var(--ftc-gd-1);
+    }
+
+    &-row {
+        max-width: 1590px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 100px;
+
+        @media #{$xxxl,$xxl,$xl} {
+            gap: 0px;
+        }
+
+        @media #{$lg,$md,$xs} {
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &-item {
+        gap: 20px;
+        .item-number {
+            font-size: 80px;
+            line-height: 1;
+            color: transparent;
+            -webkit-text-stroke: 1px #fff;
+            span {
+                line-height: 1;
+            }
+
+            @media #{$xl,$lg,$md,$xs} {
+                font-size: 50px;
+            }
+        }
+
+        .item-title {
+            color: #fff;
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 500;
+        }
+    }
+    
+}
+/* 
+    achieve-2-end
+*/

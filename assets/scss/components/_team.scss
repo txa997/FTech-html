@@ -268,3 +268,143 @@
 /* 
     team-2-end
 */
+
+/* 
+    team-3-start
+*/
+.ftc-team-3 {
+
+    &-scn-title {
+
+        @media #{$md,$xs} {
+            flex-wrap: wrap;
+        }
+
+        .left {
+            max-width: 550px;
+        }
+        .right {
+            max-width: 450px;
+        }
+    }
+
+    &-membar-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 80px;
+
+        @media #{$md} {
+            grid-template-columns: 1fr 1fr;
+            padding-left: 0px;
+        }
+
+        @media #{$xs} {
+            grid-template-columns: 1fr ;
+            padding-left: 0px;
+        }
+
+        @media #{$sm} {
+            grid-template-columns: 1fr 1fr;
+            padding-left: 0px;
+        }
+    }
+
+    &-membar {
+        position: relative;
+        z-index: 1;
+        padding-top: 125px;
+        margin-left: -80px;
+
+        @media #{$md,$xs} {
+            margin-left: 0px;
+        }
+
+        .main-img {
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            height: 100%;
+        }
+
+        .content {
+            display: inline-block;
+            padding-top: 20px;
+            padding-left: 18px;
+            padding-right: 50px;
+            padding-bottom: 82px;
+            background: round;
+            position: absolute;
+            top: 10%;
+            right: -35px;
+            transition: 500ms var(--cube-2);
+            opacity: 0;
+            z-index: 2;
+
+            @media #{$md,$xs} {
+                right: 0px;
+            }
+        }
+
+        .membar-name {
+            font-size: 30px;
+            line-height: 1.13;
+            margin-bottom: 6px;
+            transition: 300ms var(--cube-1);
+
+            &:hover {
+                color: var(--ftc-pr-2);
+                transform: scaleX(95%);
+            }
+        }
+
+        .membar-bio {
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 18px;
+        }
+
+        .ftc-social-link-1 {
+            gap: 20px;
+
+            @media #{$xs} {
+                gap: 10px;
+            }
+
+            .this-link {
+                width: 42px;
+                height: 42px;
+                background: transparent;
+                border: 1px solid #fff;
+                color: #fff;
+
+                &:hover {
+                    border-color: transparent;
+                    background: var(--ftc-pr-2);
+                    color: #fff;
+                }
+            }
+        }
+
+        &:hover {
+            .content {
+                top: 0;
+                opacity: 1;
+            }
+        }
+
+        &:nth-last-child(1) {
+            .content {
+                right: 0;
+            }
+        }
+    }
+}
+
+
+
+/* 
+    team-3-end
+*/
