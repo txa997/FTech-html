@@ -119,5 +119,194 @@
 
 
  /* 
-    features-end-start
+    features-1-end
  */
+
+
+/* 
+    features-5-start
+*/
+
+
+//  feh-feature-3 start 
+
+.feh-features-3 {
+    &-area {
+        padding: 125px 0 105px 0;
+        position: relative;
+
+        @media #{$xs} {
+            padding: 100px 0;
+        }
+
+        &:is(.active) {
+            .feh-features-3-shape {
+                opacity: 1;
+                transform: scale(1) translate(0px, 0px);
+            }
+        }
+    }
+    &-shape {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        transform: scale(0.3) translate(350px, -350px);
+        opacity: 0;
+        transition: all 3000ms ease;
+
+        @media #{$xxl} {
+            max-width: 240px;
+        }
+        @media #{$xl, $lg} {
+            max-width: 200px;
+        }
+        @media #{$md, $xs} {
+            display: none;
+        }
+    }
+    &-wrap {
+        max-width: 1165px;
+        margin: 0 auto;
+    }
+    &-title {
+        max-width: 675px;
+        margin: 0 auto;
+        text-align: center;
+
+        .ftc-section-title-1 {
+            text-align: center;
+        }
+    }
+    &-content {
+        margin-top: 40px;
+    }
+    &-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 60px 0;
+        position: relative;
+        transition: all 0.4s ease;
+
+        @media #{$xs} {
+            flex-direction: column;
+            align-items: start;
+            gap: 20px;
+            padding: 30px 0;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-image: -moz-linear-gradient( 179deg, rgb(249,255,226) 45%, rgb(196,239,23) 100%);
+            background-image: -webkit-linear-gradient( 179deg, rgb(249,255,226) 45%, rgb(196,239,23) 100%);
+            background-image: -ms-linear-gradient( 179deg, rgb(249,255,226) 45%, rgb(196,239,23) 100%);
+        }
+
+        .rev-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            width: 85%;
+
+            @media #{$xl, $md} {
+                width: 90%;
+            }
+
+            @media #{$xs} {
+                flex-direction: column;
+                gap: 25px;
+                align-items: start;
+                width: 100%;
+            }
+
+            .rev-content-item-1 {
+                display: flex;
+                align-items: center;
+                gap: 40px;
+
+                @media #{$md, $xs} {
+                    gap: 30px;
+                }
+                @media #{$xs} {
+                    flex-direction: column;
+                    align-items: start;
+                    gap: 25px;
+                }
+
+                i {
+                    font-size: 65px;
+                    color: var(--ftc-pr-color);
+                    position: static;
+                }
+
+                .ftc-heading-1 {
+                    font-size: 38px;
+
+                    @media #{$xs} {
+                        font-size: 32px;
+                    }
+                    @media #{$xs} {
+                        font-size: 24px;
+                    }
+                }
+            }
+
+            .rev-content-item-2 {
+                display: flex;
+                align-items: center;
+                gap: 55px;
+                max-width: 505px;
+
+                .line {
+                    height: 55px;
+                    width: 1px;
+                    background-color: #000;
+                    transform: rotate(316deg);
+
+                    @media #{$md, $xs} {
+                        display: none;
+                    }
+                }
+                .ftc-para-1 {
+                    @media #{$xs} {
+                        max-width: 420px;
+                    }
+                }
+            }
+        }
+
+        i {
+            transition: all 0.4s ease;
+
+            @media #{$xs} {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+        }
+
+        &:hover {
+            padding-right: 10px;
+            padding-left: 10px;
+            background-image: -moz-linear-gradient( 179deg, rgb(249,255,226) 45%, rgb(196,239,23) 100%);
+            background-image: -webkit-linear-gradient( 179deg, rgb(249,255,226) 45%, rgb(196,239,23) 100%);
+            background-image: -ms-linear-gradient( 179deg, rgb(249,255,226) 45%, rgb(196,239,23) 100%);
+
+            i {
+                color: rgb(196,239,23)
+            }
+        }
+    }
+}
+
+//  feh-feature-3 end
+/* 
+    features-5-end
+*/

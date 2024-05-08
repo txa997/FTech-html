@@ -177,3 +177,175 @@
 /* 
     cta-2-end
 */
+
+
+
+
+
+// feh cta-3 start 
+
+.feh-cta-3 {
+    &-area {
+        padding: 225px 0 40px 0;
+        position: relative;
+        overflow: hidden;
+
+        @media #{$xs} {
+            padding: 100px 0 40px 0;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: rgb(0, 0, 0, 0.5);
+            opacity: 1;
+            transition: .5s var(--cube-1);
+        }
+
+        &:is(.active) {
+            &::after {
+                opacity: 0;
+                transition-delay: .3s;
+            }
+            .feh-cta-3-wrap {
+                transform: scale(0.2);
+                opacity: 0;
+                visibility: hidden;
+                transition-delay: 0;
+            }
+    
+            .feh-cta-3-btn-close {
+                opacity: 1;
+                visibility: visible;
+                transition-delay: .4s;
+            }
+        }
+    }
+    &-wrap {
+        position: relative;
+        z-index: 2;
+        max-width: 850px;
+        margin: 0 auto;
+        text-align: center;
+        transition: .5s var(--cube-1);
+
+        .ftc-section-title-1 {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 60px;
+        }
+    }
+    &-video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    &-btn {
+        margin-bottom: 40px;
+        background: #fff;
+        border-radius: 100%;
+        width: 145px;
+        height: 145px;
+
+        @media #{$xs} {
+            width: 100px;
+            height: 100px;
+        }
+
+        img {
+            animation: feh-cta-btn 4s infinite ease-in-out;
+        }
+
+        &-close {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            outline: none;
+            border: 2px solid #fff;
+            border-radius: 100%;
+            z-index: 3;
+            margin: 0 auto;
+            visibility: hidden;
+            opacity: 0;
+            transition: .5s var(--cube-1);
+
+            i {
+                display: flex;
+                color: #fff;
+                font-size: 22px;
+                transform: rotate(315deg);
+                transition: .5s var(--cube-1);
+            }
+
+            &:hover {
+                background: var(--ftc-pr-1);
+                border-color: var(--ftc-pr-1);
+
+                i {
+                    color: #000;
+                }
+            }
+        }
+    }
+    &-brand-marque {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+        width: 8000px;
+        margin-top: 140px;
+        animation: feh-cta-marque 30s linear infinite;
+
+        @media #{$xs} {
+            margin-top: 80px;
+        }
+    }
+    &-brand-text{
+        font-size: 150px;
+        font-family: "Unbounded";
+        color: rgb(78, 78, 78);
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1.2;
+        margin-bottom: 0;
+
+        @media #{$xs} {
+            font-size: 120px;
+        }
+
+        .brands {
+            color: rgb(224, 224, 224);
+        }
+      }      
+}
+
+@keyframes feh-cta-btn {
+    0% {
+      transform: rotate(0deg);
+    }
+    0% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes feh-cta-marque {
+    0% {
+        transform: translateX(-70%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+  }
+
+// feh cta-3 end

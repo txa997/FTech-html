@@ -68,6 +68,8 @@ document.addEventListener("DOMContentLoaded", function () {
 		.from(".ftc-hero-3-disc " , {  transform: "rotateX(47deg) translateY(-200px)" , transformOrigin: "50% 0%",		duration:1.5, ease: "bounce.out", opacity:0 }, "<=1" )
 		.from(".ftc-hero-3-title " , {  transform: "rotateX(47deg) translateY(-200px)" , transformOrigin: "50% 0%",		duration:1.5, ease: "bounce.out", opacity:0 }, "<=.5")
 
+		// hero 3 start 
+		gsap.timeline().from(".feh-hero-3-img" , { opacity: 0, y: 400, duration: 2, delay: 1 });
 
 	})
 
@@ -196,6 +198,31 @@ if (menuToggle2) {
 	});
 	
 }
+
+
+// active class add
+
+gsap.to(".feh-need-3-area", {
+	scrollTrigger: {
+	  trigger: ".feh-need-3-area",
+	  start: "top 70%",
+	  end: "bottom bottom",
+	  toggleClass: "active",
+	  once: true,
+	},
+  });
+
+
+gsap.to(".feh-exper-3-area", {
+	scrollTrigger: {
+	  trigger: ".feh-exper-3-area",
+	  start: "top 70%",
+	  end: "bottom bottom",
+	  toggleClass: "active",
+	  once: true,
+	},
+  });
+
 
 // image-paralax-animation-start
 gsap.utils.toArray(".image-pllx").forEach(function(container) {
@@ -884,6 +911,38 @@ if($('.ftc-testimonial-3-active').length) {
 	});
 }
 
+// testimonial slider start 
+
+let tstimonial__slider1 = new Swiper('.feh_testimonial_3_active', {
+	loop: true,
+	spaceBetween: 0,
+	speed: 500,
+	rtl: false,
+	slidesPerView: 1,
+	effect: 'fade',
+	autoplay: {
+		delay: 5000,
+		},
+	fadeEffect: {
+		crossFade: true
+	},
+	pagination: {
+		el: ".feh-testimonial-3-pagination",
+		clickable: true
+	  },
+
+});
+
+
+
+// cta-3-toggle-class
+$('.feh-cta-3-btn').on("click", function() {
+    $('.feh-cta-3-area').toggleClass("active");
+});
+
+$('.feh-cta-3-btn-close').on("click", function() {
+    $('.feh-cta-3-area').toggleClass("active");
+});
 
 // team-2-hover-active
 $(".ftc-t1-active-toggle").on("mouseover", function(){

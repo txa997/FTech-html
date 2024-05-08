@@ -447,3 +447,169 @@ testimonial-3-start
 testimonial-3-end
 */
 
+/* 
+testimonial-5-start
+*/
+
+
+.feh-testimonial-3-wrap {
+    padding-left: 70px;
+    padding-right: 70px;
+    @media #{$xl,$lg,$md,$xs} {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+.feh-testimonial-3-item {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    @media #{$xs} {
+        flex-wrap: wrap;
+    }
+    .main-img {
+        width: 470px;
+        height: 470px;
+        border-radius: 50%;
+        overflow: hidden;
+        text-align: center;
+        position: relative;
+        object-position: top;
+        z-index: 1;
+        flex: 0 0 auto;
+        transform: rotateY(90deg);
+        transition: 600ms ;
+        @media #{$md} {
+            width: 350px;
+            height: 350px;
+        }
+        @media #{$xs} {
+            width: 100%;
+            height: 350px;
+        }
+        &::after {
+            width: 100%;
+            height: 100%;
+            content: "";
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            background: linear-gradient(0deg, rgba(255,255,255,1) 20%, rgba(255,255,255,0) 100%);
+            z-index: -1;
+        }
+        img {
+            transform: translateY(100%);
+            transition: 600ms ease-in-out;
+            transition-delay: 0s;
+        }
+    }
+    .title {
+        font-size: 35px;
+        font-weight: 700;
+        margin-bottom: 40px;
+        transform: translateX(100px);
+        transition: 600ms ease-in-out;
+        opacity: 0;
+
+        @media #{$xs} {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+    }
+    .comment {
+        font-size: 22px;
+        line-height: 1.45;
+        padding-left: 30px;
+        border-left: 4px solid var(--ftc-pr-1);
+        margin-bottom: 60px;
+        transform: translateX(100px);
+        transition: 600ms ease-in-out;
+        opacity: 0;
+        transition-delay: 0.3s;
+
+        @media #{$xs} {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+    }
+    .name {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 5px;
+
+        @media #{$xs} {
+            font-size: 22px;
+        }
+    }
+    .bio {
+        display: inline-block;
+        color: #7e7f80;
+    }
+    .content-wrap {
+        transform: translateX(100px);
+        transition: 1000ms ease-in-out;
+        opacity: 0;
+        transition-delay: .9s;
+    }
+}
+
+.feh-testimonial-3-wrap {
+    .swiper-container {
+        .swiper-wrapper {
+            .swiper-slide {
+                &:is(.swiper-slide-active) {
+                    .feh-testimonial-3-item .main-img {
+                        transform: rotateY(0deg);
+                        img {
+                            transform: translateY(0);
+                            transition-delay: .3s;
+                        }
+                    }
+                    .feh-testimonial-3-item {
+                        .title {
+                            transform: translateX(0);
+                            opacity: 1;
+                        }
+                        .comment {
+                            transform: translateX(0);
+                            opacity: 1;
+                            transition-delay: 0s;
+                        }
+                        .content-wrap {
+                            transform: translateX(0px);
+                            opacity: 1;
+                            transition-delay: 0s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .feh-testimonial-3-pagination {
+        padding-top: 30px;
+        padding-left: 170px;
+        display: flex;
+        gap: 25px;
+        @media #{$xs} {
+            padding-left: 50px;
+        }
+        span {
+            opacity: 1;
+            width: 14px;
+            height: 14px;
+            border: 1px solid #969293;
+            background: transparent;
+            &:is(.swiper-pagination-bullet-active) {
+                background: var(--ftc-pr-1);
+                border-color: transparent;
+            }
+        }
+    }
+}
+
+
+/* 
+testimonial-5-end
+*/
+

@@ -1,0 +1,127 @@
+// capabiliti-3 start 
+
+.feh-capabil-3 {
+    &-area {
+        padding: 175px 0 145px 0;
+
+        @media #{$xs} {
+            padding: 140px 0 100px 0;
+        }
+        &:is(.active) {
+            .img-1-wrap, .img-2-wrap {
+                clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+            }
+        }
+    }
+    &-left {
+        margin-left: -305px;
+        position: relative;
+
+        @media #{$xl} {
+            margin-left: -180px;
+        }
+        @media #{$md, $xs, $lg} {
+            margin-left: 0px;
+        }
+
+        .img-1-wrap {
+            margin-top: -267px;
+            position: absolute;
+            width: 100%;
+            transition: 9s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            clip-path: polygon(0 0, 0% 0%, 0% 100%, 0% 100%);
+
+            @media #{$md, $xs, $lg} {
+                position: static;
+            }
+            @media #{$xs} {
+                margin-top: -45px;
+            }
+        }
+        .img-2-wrap {
+            position: absolute;
+            right: 0;
+            top: -100px;
+            clip-path: polygon(0 0, 0% 0%, 0% 100%, 0% 100%);
+            transition: 6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition-delay: 1.3s;
+
+            @media #{$md, $xs, $lg} {
+                bottom: 0;
+                top: auto;
+            }
+            @media #{$md} {
+                max-width: 400px;
+            }
+            @media #{$xs} {
+                max-width: 200px;
+            }
+        }
+    }
+    &-right {
+        @media #{$md, $xs, $lg} {
+            margin-top: 50px;
+        }
+        .ftc-section-title-1 {
+            color: #fff;
+        }
+        .ftc-subtitle-1 {
+            color: #fff;
+        }
+        .line {
+            background: #fff;
+        }
+    }
+    &-tab {
+        margin-right: 50px;
+
+        @media #{$xs} {
+            margin-bottom: 30px;
+        }
+
+        &-wrap {
+            margin-top: 60px;
+        }
+        .nav-link {
+            font-size: 28px;
+            font-weight: 700;
+            padding: 10px 25px;
+            border-radius: 50px;
+            color: #fff;
+            background: transparent;
+            transition: all 0.4s ease;
+
+            @media #{$xs} {
+                font-size: 22px;
+            }
+
+            &:is(.active) {
+                background: var(--ftc-pr-1);
+                color: var(--ftc-pr-color);
+            }
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+
+            &:hover {
+                background: var(--ftc-pr-1);
+                color: var(--ftc-pr-color);
+            }
+        }
+        &-content {
+            .ftc-para-1 {
+                color: #fff;
+            }
+        }
+    }
+    &-btn-wrap {
+        margin-left: 270px;
+        margin-top: 65px;
+
+        @media #{$xs} {
+            margin-left: 0;
+        }
+    }
+}
+
+// capabiliti-3 end

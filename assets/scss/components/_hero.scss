@@ -628,3 +628,129 @@
 /* 
     hero-3-end
 */
+
+
+
+
+
+/*
+ hero-5-start 
+*/
+
+ .feh-hero-3 {
+    &-area {
+        padding: 180px 0 40px 0;
+    }
+    &-title {
+        display: flex;
+
+        @media #{$lg, $md, $xs} {
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .title {
+            font-size: 110px ;
+            line-height: 1;
+            font-weight: 800;
+            max-width: 900px;
+            margin-left: -180px;
+            text-transform: capitalize;
+
+            @media #{$xl, $lg} {
+                font-size: 90px;
+            }
+            @media #{$lg, $md, $xs} {
+                margin-left: 0;
+            }
+            @media #{$lg} {
+                font-size: 70px;
+            }
+            @media #{$md} {
+                font-size: 60px;
+            }
+            @media #{$sm} {
+                font-size: 50px;
+            }
+            @media #{$xs} {
+                font-size: 40px;
+            }
+        }
+        .title-sub {
+            text-align: right;
+            display: block;
+            @media #{$lg, $md, $xs} {
+                text-align: left;
+            }
+        }
+    }
+    &-img-wrap {
+        max-width: 545px;
+
+        .feh-hero-3-img {
+            opacity: 1;
+        }
+    }
+    &-cont {
+        display: flex;
+        align-items: center;
+        gap: 90px;
+
+        @media #{$md, $xs} {
+            flex-direction: column;
+            gap: 20px;
+            align-items: start;
+        }
+        
+        .ftc-para-1 {
+            max-width: 650px;
+        }
+    }
+    &-client {
+        display: flex;
+        align-items: center;
+        gap: 90px;
+        justify-content: end;
+        margin-top: 130px;
+
+        @media #{$xxl, $xl} {
+            gap: 50px;
+        }
+        @media #{$lg} {
+            flex-wrap: wrap;
+            justify-content: start;
+            gap: 40px;
+            max-width: 960px;
+            margin: 60px auto 100px;
+        }
+        @media #{$md} {
+            flex-wrap: wrap;
+            justify-content: start;
+            gap: 40px;
+            max-width: 720px;
+            margin: 60px auto 100px;
+        }
+        @media #{$xs} {
+            flex-wrap: wrap;
+            justify-content: start;
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        &-item {
+            @media #{$xxl} {
+                max-width: 150px;
+            }
+            @media #{$xl} {
+                max-width: 130px;
+            }
+            @media #{$xs, $xl} {
+                max-width: 100px;
+            }
+        }
+    }
+}
+
+/*
+    hero-5-end 
+*/

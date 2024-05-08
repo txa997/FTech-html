@@ -64,6 +64,73 @@
 /* 
     mobile-menu-btn-1-end 
 */
+
+
+
+
+
+
+.feh-mobile-menu-btn-1 {
+    outline: none;
+    background: transparent;
+    flex: 0 0 auto;
+    width: 62px;
+    height: 62px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 50%;
+    transition: 500ms var(--cube-2);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding: 21px 20px;
+    border: 1px solid #000;
+    
+    span {
+        display: block;
+        background: #000;
+        width: 100%;
+        height: 2px;
+        transition: 500ms var(--cube-2);
+        margin-bottom: 2px;
+    }
+    &:focus {
+        span {
+            &:nth-child(2) {
+                transform: translateY(1px) rotate(317deg);
+            }   
+            &:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+
+            }  
+            &:nth-child(3) {
+                visibility: hidden;
+                opacity: 0;
+            }  
+        }
+    }
+    &:hover {
+        transform: scale(95%);
+        span {
+            &:nth-child(2) {
+                transform: translateY(1px) rotate(317deg);
+            }   
+            &:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+
+            }  
+            &:nth-child(3) {
+                visibility: hidden;
+                opacity: 0;
+            }  
+        }
+    }
+}
+
+
+
+
 /* 
     pr-btn-1-start
 */

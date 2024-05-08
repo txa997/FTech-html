@@ -450,6 +450,96 @@
   header-3-css-end
 */
 
+// feh-header-5 start 
+.feh-header-3 {
+  &-area {
+    background: transparent;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+  }
+
+  &-container {
+    max-width: 1830px;
+  }
+
+  &-row {
+    .main-navigation {
+      margin-left: auto;
+      margin-right: 150px;
+
+      @media #{$xl} {
+        margin-right: 100px;
+      }
+      @media #{$lg} {
+        margin-right: 50px;
+      }
+    }
+  }
+
+  &-logo {
+    &-1 {
+      position: relative;
+      z-index: 1;
+    }
+  }
+  &-action-link {
+    gap: 40px;
+
+    .ftc-btn-1  {
+      @media #{$lg} {
+        display: none;
+      }
+      @media #{$xs} {
+        display: none;
+      }
+      @media #{$sm} {
+        display: block;
+      }
+    }
+  }
+  &-searh-btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+  
+}
+.main-navigation {
+  &:is(.feh-navbar-3) {
+    .navbar-nav {
+      li {
+        &:not(:last-child) {
+          margin-right: 40px;
+
+          @media #{$lg} {
+            margin-right: 20px;
+          }
+        }
+        a {
+          color: #252323;
+          text-transform: uppercase;
+          font-size: 16px;
+        }
+
+        .dropdown-menu {
+          li {
+            margin-right: 0;
+
+            a {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// feh-header-5 end
+
 
 /* 
   sticky-header-css-start
