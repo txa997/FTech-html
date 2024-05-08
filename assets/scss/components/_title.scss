@@ -182,38 +182,43 @@
         }
     }
 
-    &:is(.has-size-60) {
-        font-size: 60px;
-        color: var(--ftc-heading-2);
-        line-height: 1.16;
-        margin-bottom: 25px;
 
-        @media #{$xxl} {
-            font-size: 55px;
-        }
+    &:is(.has-color-white) {
+        color: #fff;
+    }
 
-        @media #{$xl} {
-            font-size: 50px;
-        }
+}
+
+.ftc-section-title-2 {
+    font-family: var(--saira);
+    font-size: 60px;
+    line-height: 1.16;
+    font-weight: 700;
+    color: var(--ftc-heading-2);
+    text-transform: capitalize;
+    margin-bottom: 25px;
+
+    @media #{$xxl} {
+        font-size: 55px;
+    }
+
+    @media #{$xl} {
+        font-size: 50px;
+    }
+
+    @media #{$lg} {
+        font-size: 45px;
+    }
+
+    @media #{$md} {
+        font-size: 40px;
+    }
     
-        @media #{$lg} {
-            font-size: 45px;
-        }
-    
-        @media #{$md} {
-            font-size: 40px;
-        }
-        
-        @media #{$xs} {
-            font-size: 30px;
-        }
-        @media #{$sm} {
-            font-size: 35px;
-        }
-
-        &:is(.has-color-white) {
-            color: #fff;
-        }
+    @media #{$xs} {
+        font-size: 30px;
+    }
+    @media #{$sm} {
+        font-size: 35px;
     }
 
     &:is(.has-color-white) {

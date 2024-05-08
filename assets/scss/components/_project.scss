@@ -315,3 +315,154 @@
 /* 
     project-2-end
 */
+
+/* 
+    project-3-start
+*/
+.ftc-project-3 {
+    &-grid {
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr; 
+        gap: 10px;
+
+        grid-template-areas: 
+        "item-1 item-2 item-3"
+        "item-4 item-2 item-6"
+        "item-4 item-5 item-6"; 
+
+        @media #{$lg,$md} {
+            grid-template-columns: 1fr 1fr; 
+            grid-template-areas: 
+            "item-1 item-2"
+            "item-3 item-4"
+            "item-5 item-6"; 
+        }
+
+        @media #{$xs} {
+            grid-template-columns: 1fr; 
+            grid-template-areas: 
+            "item-1"
+            "item-2"
+            "item-3"
+            "item-4"
+            "item-5"
+            "item-6"; 
+        }
+
+        .item-1 { grid-area: item-1; }
+        .item-2 { grid-area: item-2; }
+        .item-3 { grid-area: item-3; }
+        .item-4 { grid-area: item-4; }
+        .item-5 { grid-area: item-5; }
+        .item-6 { grid-area: item-6; }
+    }
+
+    
+
+    &-item {
+        position: relative;
+        z-index: 1;
+
+        @media #{$lg,$md,$xs} {
+            height: 450px;
+            
+        }
+
+        .content {
+            position: absolute;
+            background: round;
+            background-position: right;
+            background-repeat: no-repeat;
+            bottom: 35px;
+            left: 0;
+            z-index: 1;
+            padding-left: 25px;
+            padding-bottom: 25px;
+            padding-right: 95px;
+            max-width: 480px;
+            transform: translateX(-105%);
+            transition: 500ms var(--cube-1);
+            
+
+            @media #{$xxl,$xl} {
+                max-width: 95%;
+            }
+
+            @media #{$lg,$md,$xs} {
+                max-width: 95%;
+                background-color: #fff;
+                padding-right: 65px;
+            }
+        }
+
+        .item-subtitle{
+            background: var(--ftc-gd-1);
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 0 0 12px 12px;
+            padding: 12px 27px;
+            margin-bottom: 18px;
+        }
+
+        .item-title {
+            font-size: 32px;
+            line-height: 1.25;
+            transition: 400ms var(--cube-1);
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            line-clamp: 1;
+            -webkit-box-orient: vertical;
+            transition: 300ms var(--cube-1);
+            transform-origin: left;
+
+            @media #{$xxl} {
+                font-size: 28px;
+            }
+
+            @media #{$xl,$lg,$md,$xs} {
+                font-size: 22px;
+            }
+
+            &:hover {
+                color: var(--ftc-pr-2);
+                transform: scaleX(98%);
+            }
+        }
+
+        .item-btn {
+            width: 66px;
+            height: 66px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--ftc-gd-1);
+            border-radius: 50%;
+            font-size: 30px;
+            color: #fff;
+            position: absolute;
+            right: -11px;
+            top: -17px;
+            transition: 400ms var(--cube-2);
+
+            &:hover {
+                transform: rotate(45deg);
+            }
+        }
+
+        &:hover {
+            .content {
+                transform: translateX(0%);
+            }
+        }
+    }
+}
+
+
+/* 
+    project-3-end
+*/

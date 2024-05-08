@@ -231,6 +231,18 @@ boxes.forEach((box, i) => {
   });
 });
 
+const boxes2 = gsap.utils.toArray('.ftcfadeup2');
+
+boxes.forEach((box, i) => {
+  const anim = gsap.fromTo(box, { y: 200}, {duration: 1, y: 0});
+  ScrollTrigger.create({
+    trigger: box,
+    animation: anim,
+    toggleActions: 'play none none reverse',
+    once: false,
+  });
+});
+
 
 // ftc-fade-left
 gsap.utils.toArray('.ftc-fade-left').forEach((el, index) => { 
@@ -568,6 +580,26 @@ ftcteam3.fromTo(".ftc-team-3-membar" , { xPercent: -100 , }, { xPercent: 0 , dur
 
 
 
+// ftc-brand-3
+var ftcbrand3 = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: ftcbrand3,
+	  trigger: '.ftc-brand-3-logo-wrap',
+	  start: "top 100%",
+	  end: "top -100%",
+	  scrub: 7,
+	  toggleActions: "play reverse play reverse",
+	  markers: false
+	}
+});
+	
+ftcbrand3.fromTo(".ftc-brand-3-logo-1" , {     transform: "translateY(0%)" }, { transform: "translateY(-50%)", duration:1, ease: "ease", })
+.fromTo(".ftc-brand-3-logo-2" , {     transform: "translateY(-50%)" }, { transform: "translateY(0%)", duration:1, ease: "ease", }, "<")
+.fromTo(".ftc-brand-3-logo-3" , {     transform: "translateY(0%)" }, { transform: "translateY(-50%)", duration:1, ease: "ease", }, "<")
+
+
+
 
 // title-animation
 $(window).on('load',function(){
@@ -798,6 +830,54 @@ if($('.ftc-brand-1-active').length) {
 			1400: {
 				slidesPerView: 6,
 			},
+
+
+		},
+	});
+}
+
+  
+// ftc-testimonial-3-active
+if($('.ftc-testimonial-3-active').length) {
+	let slider = new Swiper('.ftc-testimonial-3-active', {
+		loop: true,
+		spaceBetween: 30,
+		slidesPerView: 3,
+		speed: 1000,
+		autoplay: {
+			delay: 5000,
+		},
+
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+			renderBullet: function (index, className) {
+			  return '<span class="' + className + '">' + (index + 1) + "</span>";
+			},
+		},
+
+		navigation: {
+			nextEl: ".ftc_testimonial_3_next",
+			prevEl: ".ftc_testimonial_3_prev",
+		},
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 1,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 2,
+			},
+			1200: {
+				slidesPerView: 3,
+			},
+
 
 
 		},
