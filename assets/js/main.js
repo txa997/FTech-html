@@ -557,7 +557,7 @@ var ftchero3 = gsap.timeline({
 	  animation: ftchero3,
 	  trigger: '.ftc-hero-3-area',
 	  start: "top 0%",
-	  end: "bottom 0%",
+	  end: "bottom -100%",
 	  scrub: 1,
 	  toggleActions: "play reverse play reverse",
 	  markers: false
@@ -624,6 +624,22 @@ var ftcbrand3 = gsap.timeline({
 ftcbrand3.fromTo(".ftc-brand-3-logo-1" , {     transform: "translateY(0%)" }, { transform: "translateY(-50%)", duration:1, ease: "ease", })
 .fromTo(".ftc-brand-3-logo-2" , {     transform: "translateY(-50%)" }, { transform: "translateY(0%)", duration:1, ease: "ease", }, "<")
 .fromTo(".ftc-brand-3-logo-3" , {     transform: "translateY(0%)" }, { transform: "translateY(-50%)", duration:1, ease: "ease", }, "<")
+
+// ftc-choose-us-3
+var ftcchoose3 = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: ftcchoose3,
+	  trigger: '.ftc-choose-us-3-feature-wrap',
+	  start: "top 90%",
+	  end: "top 50%",
+	  scrub: 1,
+	  toggleActions: "play reverse play reverse",
+	  markers: false
+	}
+});
+	
+ftcchoose3.from(".ftc-choose-us-3-feature" , {   transform: "rotateY(90deg)" , stagger: 0.5, duration: 1  })
 
 
 

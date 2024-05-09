@@ -179,10 +179,149 @@
 */
 
 
+/* 
+    cta-4-start
+*/
+.ftc-cta-4 {
+
+    &-area {
+        @media #{$md,$xs} {
+            padding-top: 100px;
+        }
+    }
+
+    &-scn-title {
+        .ftc-section-title-2  {
+            font-size: 48px;
+            line-height: 1.20;
+
+            @media #{$md} {
+                font-size: 40px;
+            }
+            
+            @media #{$xs} {
+                font-size: 30px;
+            }
+            @media #{$sm} {
+                font-size: 35px;
+            }
+
+        }
+    }
+
+    &-row {
+        display: grid;
+        grid-template-columns: 1.1fr .9fr;
+        gap: 50px;
+        align-items: center;
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-img {
+        mask-image: url(../img/cta/cta-4-img-mask.png);
+        mask-size: cover;
+        mask-repeat: no-repeat;
+        mask-position: left bottom;
+        margin-right: -265px;
+
+        @media #{$xxxl} {
+            margin-right: -215px;
+        }
+
+        @media #{$xxl} {
+            margin-right: -110px;
+        }
+
+        @media #{$xl} {
+            margin-right: -50px;
+        }
+
+        @media #{$lg} {
+            margin-right: -175px;
+        }
+
+        @media #{$md,$xs} {
+            margin-right: -0px;
+        }
+
+        .img {
+            width: 100%;
+            display: block;
+            height: 550px;
+            background-image: url(../img/cta/cta-4-img.png);
+            background-attachment: fixed;
+            background-position: right;
+            background-repeat: no-repeat;
+            // background-size: contain;
+            @media #{$xs} {
+                background-position: center;
+            }
+    
+            @media #{$xs} {
+                height: 400px;
+            }
+        }
+    }
+
+
+    &-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px 15px;
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
+
+        @media #{$sm} {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .has-full-width {
+            grid-column: 1 / -1;
+        }
+
+        input {
+            height: 60px;
+            border: none;
+            outline: none;
+            background: #F5F5FA;
+            border-radius: 10px;
+            color: #0B1118;
+            font-family: var(--saira);
+            padding: 0 25px;
+            font-size: 16px;
+        }
+
+        .form-btn {
+            background: var(--ftc-sd-1);
+            border-radius: 10px;
+            font-size: 18px;
+            font-family: var(--saira);
+            color: #fff;
+            height: 60px;
+            transition: 400ms var(--cube-1);
+
+            &:hover {
+                background: var(--ftc-pr-2);
+            }
+        }
+    }
+} 
+
+
+/* 
+    cta-4-end
+*/
 
 
 
-// feh cta-3 start 
+
+
+// feh cta-5 start 
 
 .feh-cta-3 {
     &-area {
@@ -348,4 +487,4 @@
     }
   }
 
-// feh cta-3 end
+// feh cta-5 end
