@@ -353,12 +353,18 @@
     gap: 20px;
 
     .ftc-mobile-menu-btn-1 {
+      background: var(--ftc-gd-1);
+
+      span {
+        color: #fff;
+      }
+
       @media #{$over,$xxxl,$xxl,$xl,$lg} {
         display: none;
       }
     }
 
-    .ftc-btn-1 {
+    .ftc-btn-3 {
       @media #{$xs} {
         display: none;
       }
@@ -499,6 +505,10 @@
         display: block;
       }
     }
+
+
+
+
   }
   &-searh-btn {
     border: none;

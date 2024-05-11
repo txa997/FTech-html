@@ -220,6 +220,15 @@
         }
     }
 
+    &-content {
+
+        @media #{$xl,$lg} {
+            padding: 100px 0;
+        }
+
+
+    }
+
     &-img {
         mask-image: url(../img/cta/cta-4-img-mask.png);
         mask-size: cover;
@@ -251,14 +260,6 @@
             width: 100%;
             display: block;
             height: 550px;
-            background-image: url(../img/cta/cta-4-img.png);
-            background-attachment: fixed;
-            background-position: right;
-            background-repeat: no-repeat;
-            // background-size: contain;
-            @media #{$xs} {
-                background-position: center;
-            }
     
             @media #{$xs} {
                 height: 400px;

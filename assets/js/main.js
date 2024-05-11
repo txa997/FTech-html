@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		.from(".ftc-hero-3-disc " , {  transform: "rotateX(47deg) translateY(-200px)" , transformOrigin: "50% 0%",		duration:1.5, ease: "bounce.out", opacity:0 }, "<=1" )
 		.from(".ftc-hero-3-title " , {  transform: "rotateX(47deg) translateY(-200px)" , transformOrigin: "50% 0%",		duration:1.5, ease: "bounce.out", opacity:0 }, "<=.5")
 
-		// hero 3 start 
+		// hero 5 start 
 		gsap.timeline().from(".feh-hero-3-img" , { opacity: 0, y: 400, duration: 2, delay: 1 });
 
 	})
@@ -242,6 +242,28 @@ gsap.utils.toArray(".image-pllx").forEach(function(container) {
       }).to(image, {
         yPercent: 30,
 		scale: 1.1,
+        ease: "none",
+      }); 
+});
+
+// image-paralax-animation-start
+gsap.utils.toArray(".ftc-cta-3-pllx").forEach(function(container) {
+    let image = container.querySelector("img");
+  
+    let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: container,
+          scrub: true,
+          pin: false,
+        },
+      }); 
+      tl.from(image, {
+        yPercent: -30,
+		scaleY: 1.5,
+        ease: "none",
+      }).to(image, {
+        yPercent: 30,
+		scaleY: 1,
         ease: "none",
       }); 
 });
@@ -566,8 +588,8 @@ var ftchero3 = gsap.timeline({
 	
 ftchero3.to(".ftc-hero-3-bg-svg-1 svg path" , { xPercent: -50, transformOrigin: "left", stagger: -.05,	duration:1, ease: "ease", })
 .to(".ftc-hero-3-bg-svg-2 svg path" , { xPercent: 50, transformOrigin: "left", stagger: -.05,	duration:1, ease: "ease", }, "<=")
-.to(".ftc-hero-3-bg-svg-2 svg path" , { xPercent: 50, transformOrigin: "left", stagger: -.05,	duration:1, ease: "ease", }, "<=")
-.from(".ftc-hero-3-bg-earth" , { yPercent: 50, width: "150%", rotate: 300,	duration:1, ease: "ease", }, "<=")
+.from(".ftc-hero-3-bg-earth" , { yPercent: 20, width: "150%", rotate: 200, duration:1, ease: "ease", }, "<=")
+// .from( ".ftc-hero-3-bg-earth img" , {    duration:1 }, "<=")
 
 
 

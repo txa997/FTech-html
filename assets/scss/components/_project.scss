@@ -367,9 +367,19 @@
         position: relative;
         z-index: 1;
 
+        perspective: 1000px;
+        transform-style: preserve-3d;
+
+
+
         @media #{$lg,$md,$xs} {
             height: 450px;
             
+        }
+
+        img {
+            transition: 400ms var(--cube-1);
+            transform-origin: left bottom;
         }
 
         .content {
@@ -455,6 +465,10 @@
         }
 
         &:hover {
+            img {
+                transform: scaleX(105%);
+            }
+
             .content {
                 transform: translateX(0%);
             }
