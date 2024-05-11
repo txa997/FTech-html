@@ -259,11 +259,9 @@ gsap.utils.toArray(".ftc-cta-3-pllx").forEach(function(container) {
       }); 
       tl.from(image, {
         yPercent: -30,
-		scaleY: 1.5,
         ease: "none",
       }).to(image, {
         yPercent: 30,
-		scaleY: 1,
         ease: "none",
       }); 
 });
