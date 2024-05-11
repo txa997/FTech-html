@@ -310,6 +310,7 @@
 
         &::after {
             clip-path: polygon(0 45%, 45% 44%, 30% 100%, 0% 100%);
+            border: 2px solid var(--ftc-pr-2);
         }
     }
 }
