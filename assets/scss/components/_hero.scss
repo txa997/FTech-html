@@ -553,7 +553,6 @@
        margin-bottom: 35px;
 
 
-
         @media #{$lg} {
             font-size: 70px;
         }
@@ -635,9 +634,101 @@
 */
 .ftc-hero-4 {
     &-area {
-        background: #010317;
+        padding-top: 305px;
+        padding-bottom: 110px;
+        position: relative;
+        z-index: 1;
+    }
+
+    &-content {
+        .title {
+            font-size: 70px;
+            color: #fff;
+            font-weight: 700;
+            line-height: 1.21;
+            margin-bottom: 145px;
+            max-width: 610px;
+
+            @media #{$lg} {
+                font-size: 65px;
+            }
+    
+            @media #{$md} {
+                font-size: 60px;
+            }
+    
+            @media #{$xs} {
+                font-size: 30px;
+            }
+    
+            @media #{$sm} {
+                font-size: 42px;
+            }
+        }
+
+        .disc {
+            max-width: 500px;
+            color: #fff;
+            margin-left: auto;
+            margin-bottom: 40px;
+        }
+
+        .btn-wrap {
+            max-width: 500px;
+            margin-left: auto;
+        }
+    }
+
+    &-social {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+        position: absolute;
+        right: 60px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @media #{$xxl,$xl,$lg,$md} {
+            right: 10px;
+        }
+
+        @media #{$xs} {
+            display: none;
+        }
+
+        .link {
+            display: inline-block;
+            font-size: 22px;
+            line-height: 1;
+            background: var(--ftc-gd-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: 400ms var(--cube-1);
+
+            &:hover {
+                animation: wobble-vertical 1s ease-in-out;
+                -webkit-text-fill-color: #fff;
+            }
+        }
+
+        .title {
+            background: var(--ftc-gd-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: var(--saira);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            writing-mode: vertical-lr;
+        }
     }
 }
+
+
+
+
+
+
 /* 
     hero-4-end
 */

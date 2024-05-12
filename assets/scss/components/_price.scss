@@ -494,3 +494,211 @@ price-2-start
 /* 
 price-2-end
 */
+
+/* 
+price-4-start
+*/
+.ftc-price-4 {
+
+    &-scn-title {
+        max-width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &-card {
+        background: #1C1E35;
+        border: 1px solid rgb(255 255 255 / 10%);
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 30px;
+
+        @media #{$xl,$md} {
+            padding: 20px 10px;
+        }
+
+        @media #{$xs} {
+            padding: 20px 10px;
+        }
+
+        @media #{$sm} {
+            padding: 20px;
+        }
+
+
+
+        .header {
+            background: #0E0F1C;
+            border-radius: 15px;
+            padding: 22px;
+            margin-bottom: 15px;
+
+            @media #{$xl,$md} {
+                padding: 20px 10px;
+            }
+
+            @media #{$xs} {
+                padding: 22px 10px;
+            }
+    
+            @media #{$sm} {
+                padding: 22px;
+            }
+    
+        }
+
+        .icon {
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 50px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 17px;
+
+            @media #{$xl,$lg,$md,$xs} {
+                font-size: 40px;
+            }
+
+            .dollar {
+                display: inline-block;
+                font-size: 28px;
+                margin-top: -20px;
+            }
+
+            .month {
+                font-size: 22px;
+                font-weight: 400;
+                opacity: 70%;
+                margin-bottom: -16px;
+            }
+            
+        }
+
+        .title {
+            font-size: 22px;
+            line-height: 30px;
+            margin-bottom: 5px;
+        }
+        
+        .ftc-para-2 {
+            font-size: 16px;
+            line-height: 26px;
+        }
+
+        .card-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-family: var(--saira);
+            text-transform: capitalize;
+            font-size: 18px;
+            background: var(--ftc-gd-2);
+            color: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            position: relative;
+            z-index: 1;
+
+            &::after {
+                content: "";
+                width: 0%;
+                height: 100%;
+                background: var(--ftc-pr-2);
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                border-radius: 10px;
+                backdrop-filter: blur(110px);
+                opacity: 0;
+                transition: 400ms var(--cube-1);
+
+            }
+
+            &:hover {
+                &::after {
+                    width: 100%;
+                    opacity: .7;
+                }
+            }
+        }
+
+        .feature-list {
+            background: #0E0F1C;
+            border-radius: 10px;
+            margin-top: 15px;
+            padding: 22px;
+
+            @media #{$xl,$md} {
+                padding: 20px 10px;
+            }
+
+            @media #{$xs} {
+                padding: 22px 10px;
+            }
+    
+            @media #{$sm} {
+                padding: 22px;
+            }
+
+            li {
+                font-size: 18px;
+                font-family: var(--roboto);
+                color: #fff;
+                line-height: 28px;
+
+                @media #{$md} {
+                    font-size: 16px;
+                }
+
+                @media #{$xs} {
+                    font-size: 16px;
+                }
+
+                @media #{$sm} {
+                    font-size: 18px;
+                }
+    
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+
+                i {
+                    color: #25BBF5;
+                    font-size: 16px;
+                    display: inline-block;
+                    margin-right: 7px;
+                }
+            }
+        }
+
+        &:hover {
+            .icon {
+                animation: wobble-vertical 1s ease-in-out;
+            }
+        }
+        
+    }
+
+    &-all-btn {
+        a {
+            text-decoration: underline;
+            transition: 400ms var(--cube-1);
+
+            &:hover {
+                -webkit-text-fill-color: #fff;
+                transform: translateX(3px);
+            }
+        }
+    }
+    
+}
+
+
+
+
+/* 
+price-4-end
+*/

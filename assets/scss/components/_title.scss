@@ -92,6 +92,12 @@
         }
     }
 
+    &:is(.has-gd-2) {
+        .line {
+            background: var(--ftc-gd-2);
+        }
+    }
+
 }
 
 

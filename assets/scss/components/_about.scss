@@ -274,3 +274,156 @@
 /* 
     about-3-end
 */
+
+/* 
+    about-4-start
+*/
+.ftc-about-4 {
+    &-scn {
+        &-title {
+            position: relative;
+            z-index: 1;
+            max-width: 805px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &-btn {
+            position: absolute;
+            right: -250px;
+            bottom: -20px;
+
+            @media #{$xl,$lg,$md,$xs} {
+                position: unset;
+                margin-top: 40px;
+            }
+        }
+    }
+
+    &-content {
+        position: relative;
+        z-index: 1;
+    }
+
+    &-img {
+        height: 720px;
+    }
+}
+
+
+
+.ftc-skill {
+    &-box {
+        width: 480px;
+        background: #F3F5F9;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 25px 25px;
+
+        @media #{$xs} {
+            width: 100%;
+        }
+
+        @media #{$sm} {
+            width: 480px;
+        }
+        
+        .box-title {
+            font-size: 32px;
+            line-height: 1.31;
+            margin-bottom: 22px;
+            text-shadow: 1px 4px 0px #BCC2D2;
+
+            @media #{$xs} {
+                font-size: 24px;
+            }
+    
+            @media #{$sm} {
+                font-size: 28px;
+            }
+        }
+    }
+
+    &-item {
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    
+        .item-title {
+            font-size: 16px;
+            line-height: 26px;
+            color: #646A7B;
+            margin-bottom: 6px;
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+    
+            .gd-color {
+                background: linear-gradient(90deg, rgba(249,130,8,1) 9%, rgba(228,16,242,1) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    
+        &-progress {
+            &-bg {
+                background: rgb(32 34 51 / 5%);
+                height: 8px;
+                border-radius: 100px;
+                overflow: hidden;
+                width: 100%;
+                display: block;
+                position: relative;
+                z-index: 1;
+            }
+    
+            display: inline-block;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(249,130,8,1) 9%, rgba(228,16,242,1) 100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 100px;
+            transform-origin: left;
+            transform: scaleX(0);
+            transition: 2s var(--cube-2);
+
+            &:is(.active) {
+                transform: scaleX(1);
+            }
+        }
+    
+        &:nth-child(3) {
+            .item-title .gd-color {
+                background: linear-gradient(90deg, rgba(179,37,247,1) 9%, rgba(0,226,245,1) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .ftc-skill-item-progress {
+                background: linear-gradient(90deg, rgba(179,37,247,1) 9%, rgba(0,226,245,1) 100%);
+            }
+        }
+    
+        &:nth-child(4) {
+            .item-title .gd-color {
+                background: linear-gradient(90deg, rgba(23,63,207,1) 9%, rgba(229,4,238,1) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .ftc-skill-item-progress {
+                background: linear-gradient(90deg, rgba(23,63,207,1) 9%, rgba(229,4,238,1) 100%);
+            }
+        }
+    }
+}
+
+
+
+
+
+/* 
+    about-4-end
+*/

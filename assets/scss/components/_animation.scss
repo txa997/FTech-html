@@ -29,6 +29,12 @@
   -webkit-text-fill-color: transparent;
 }
 
+.ftc-color-gd-2 {
+  background: var(--ftc-gd-2);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @-webkit-keyframes wobble-vertical {
   16.65% {
     -webkit-transform: translateY(8px);
@@ -112,4 +118,8 @@
 
 .ftc-home-2 {
   background-color: #1f1e20;
+}
+
+.ftc-home-4 {
+  background: #010317;
 }

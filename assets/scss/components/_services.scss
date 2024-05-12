@@ -269,3 +269,297 @@
 /* 
 	services-3-end
 */
+
+/* 
+	services-4-start
+*/
+.ftc-services-4 {
+    &-scn-title {
+        display: flex;
+        align-items: center;
+        gap: 0 30px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .left {
+            max-width: 480px;
+
+            @media #{$lg} {
+                max-width: 360px;  
+            }
+        }
+        
+        .right {
+            max-width: 540px;
+        }
+    }
+
+    &-card {
+        &-container {
+            max-width: 1920px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 50px;
+            @media #{$over,$xxxl} {
+                padding-top: 20px;
+                padding-bottom: 270px; 
+            }
+            @media #{$xxl} {
+                padding-top: 0px;
+                padding-bottom: 120px; 
+            }
+            @media #{$xl} {
+                padding-top: 0px;
+                padding-bottom: 80px; 
+            }
+
+            @media #{$xs} {
+                padding: 0 15px;
+            }
+
+            @media #{$sm} {
+                padding: 0 50px;
+            }
+        }
+
+        &-grid {
+            display: flex;
+            justify-content: center;
+            
+
+            @media #{$xxxl} {
+                transform: scale(80%);
+            }
+
+            @media #{$xxl} {
+                transform: scale(70%);
+            }
+
+            @media #{$xl} {
+                transform: scale(60%);
+            }
+
+            @media #{$lg,$md,$xs} {
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+
+           
+        }
+    }
+
+    &-card-roted {
+        display: inline-block;
+        transition: 1s;
+        width: 360px;
+        flex: 0 0 auto;
+        transition: 300ms var(--cube-1);
+
+        @media #{$xs} {
+            width: 100%;
+        }
+
+        &:nth-child(1) {
+            @media #{$over,$xxxl,$xxl,$xl} {
+                transform: rotate(-5.47deg) translate(210px, 110px);
+
+                &:hover {
+                    width: 400px;
+                    transform: rotate(0deg)  translate(210px, 110px);
+                }
+            }
+
+
+        }
+
+        &:nth-child(2) {
+            @media #{$over,$xxxl,$xxl,$xl} {
+                transform: rotate(-4.36deg) translate(80px, 226px);
+
+                &:hover {
+                    width: 400px;
+                    transform: rotate(0deg) translate(80px, 226px);
+                }
+            }
+
+
+            .ftc-services-4-card {
+                background: #E45621;
+        
+                .icon {
+                    background: #C55126;
+                    border: 8px solid #E45621;
+                }
+            }
+
+        }
+
+        &:nth-child(3) {
+            @media #{$over,$xxxl,$xxl,$xl} {
+                transform: rotate(13.3deg) translate(20px, 30px);
+
+                &:hover {
+                    width: 400px;
+                    transform: rotate(0deg)  translate(20px, 30px);
+                }
+            }
+
+
+            .ftc-services-4-card {
+                background: #1AC975;
+
+                .icon {
+                    background: #1CAF69;
+                    border: 8px solid #1AC975;
+                }
+            }
+        }
+
+        &:nth-child(4) {
+            @media #{$over,$xxxl,$xxl,$xl} {
+                transform: rotate(-30deg) translate(-130px, 103px);
+
+                &:hover {
+                    width: 400px;
+                    transform: rotate(0deg) translate(-130px, 103px);
+                }
+            }
+
+
+            .ftc-services-4-card {
+                background: #2925F7;
+
+                .icon {
+                    background: #3432BD;
+                    border: 8px solid #2925F7;
+                }
+            }
+        }
+
+        &:nth-child(5) {
+            @media #{$over,$xxxl,$xxl,$xl} {
+                transform: rotate(7.09deg) translate(-160px, 20px);
+
+                &:hover {
+                    width: 400px;
+                    transform: rotate(0deg) translate(-160px, 20px);
+                }
+            }
+
+
+            .ftc-services-4-card {
+                background: #DF8E14;
+
+                .icon {
+                    background: #BB7D20;
+                    border: 8px solid #DF8E14;
+                }
+            }
+        }
+
+        &:nth-child(6) {
+            @media #{$over,$xxxl,$xxl,$xl} {
+                transform: rotate(43deg) translate(-124px, 300px);
+
+                &:hover {
+                    width: 400px;
+                    transform: rotate(0deg) translate(-365px, 270px);
+                } 
+            }
+
+
+            .ftc-services-4-card {
+                background: #2AC5DD;
+
+                .icon {
+                    background: #3AB0C2;
+                    border: 8px solid #2AC5DD;
+                }
+            }
+        }
+    }
+    
+    &-card {
+        background: #B325F7;
+        display: block;
+        border-radius: 25px;
+        padding: 15px;
+        padding-top: 30px;
+        text-align: center;
+        flex: 0 0 auto;
+        transition: 500ms var(--cube-1);
+        max-width: 360px;
+
+        @media #{$xs} {
+            max-width: 100%;
+        }
+
+        .title {
+            font-size: 30px;
+            line-height: 1.25;
+            margin-bottom: 15px;
+
+            @media #{$xs} {
+                font-size: 22px;
+            }
+
+            @media #{$sm} {
+                font-size: 30px;
+            }
+        }
+
+        
+        .disc {
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 15px;
+        }
+
+        .icon {
+            display: inline-flex;
+            width: 98px;
+            height: 98px;
+            justify-content: center;
+            align-items: center;
+            background: #9B1DD8;
+            border-radius: 50%;
+            font-size: 40px;
+            color: #fff;
+            border: 8px solid #B325F7;
+            position: relative;
+            z-index: 1;
+        }
+
+        .main-img {
+            display: inline-block;
+            height: 280px;
+            border-radius: 0 0 20px 20px;
+            margin-top: -45px;
+
+            @media #{$xs} {
+                display: block;
+            }
+        }
+    }
+
+    &-all-btn {
+        @media #{$lg,$md,$xs} {
+            padding-top: 40px;
+        }
+        a {
+            text-decoration: underline;
+            transition: 400ms var(--cube-1);
+
+            &:hover {
+                -webkit-text-fill-color: #fff;
+                transform: translateX(3px);
+            }
+        }
+    }
+}
+
+
+
+/* 
+	services-4-end
+*/

@@ -403,6 +403,49 @@
     scroll-down-1-end
 */
 
+/* 
+    circle-btn-1-start
+*/
+
+.ftc-circle-btn-1 {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+
+    &-icon-posi {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &-icon {
+        width: 65px;
+        height: 65px;
+        background: var(--ftc-gd-2);
+        border-radius: 50%;
+        font-size: 35px;
+        line-height: 1;
+        color: #fff;
+    }
+
+
+
+    &-text {
+        animation: ftc-roteted 10s infinite linear;
+    }
+
+    &:hover {
+        .ftc-circle-btn-1-icon {
+            animation: wobble-vertical 1s ease-in-out;
+            opacity: .8;
+        }
+    }
+}
+/* 
+    circle-btn-1-end
+*/
+
 
 /* 
     button-component-end
