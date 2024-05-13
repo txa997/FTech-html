@@ -115,3 +115,113 @@
 /* 
     achieve-2-end
 */
+/* 
+    achieve-4-start
+*/
+.ftc-achieve-4 {
+
+    &-area {
+        position: relative;
+        z-index: 1;
+    }
+
+    &-shape-1 {
+        display: inline-block;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        background: var(--ftc-gd-2);
+        position: absolute;
+        left: -80px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+    }
+
+    &-shape-2 {
+        display: inline-block;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        background: var(--ftc-gd-2);
+        position: absolute;
+        right: -80px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+    }
+
+    &-container {
+        max-width: 1720px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 25px;
+    }
+
+    &-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 35px 100px;
+        border-radius: 200px;
+        background: var(--ftc-gd-2);
+        gap: 30px;
+        flex-wrap: wrap;
+
+        @media #{$xxl,$xl,$lg,$md} {
+            padding: 35px 40px;
+        }
+
+        @media #{$xs} {
+            padding: 35px 20px;
+            border-radius: 40px;
+        }
+
+        @media #{$sm} {
+            padding: 35px 40px;
+            border-radius: 40px;
+        }
+    }
+
+    &-item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    
+        .icon {
+            width: 77px;
+            height: 88px;
+            background: var(--ftc-gd-2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: #fff;
+            flex: 0 0 auto;
+            clip-path: polygon(50% 0%, 100% 30%, 100% 70%, 50% 100%, 0 70%, 0 30%);
+        }
+    
+        .number {
+            font-size: 50px;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 5px;
+
+            @media #{$xl,$lg,$md,$xs} {
+                font-size: 40px;
+            }
+        }
+
+        &:hover {
+            .icon {
+                animation: wobble-vertical 1s ease-in-out;
+            }
+        }
+        
+    }
+}
+
+
+/* 
+    achieve-4-end
+*/

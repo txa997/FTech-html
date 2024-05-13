@@ -145,11 +145,6 @@
     }
 }
 
-
-
-
-
-
 /* 
     campaign-1-end
 */
@@ -278,4 +273,128 @@
 
 /* 
     campaign-2-end
+*/
+
+/* 
+    campaign-4-start
+*/
+.ftc-campaign-4 {
+    &-area {
+        
+    }
+
+    &-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.3fr;
+        gap: 25px;
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-grid-2 {
+        display: grid;
+        grid-template-columns: 1.3fr 1fr;
+        gap: 25px;
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-card-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        align-items: self-start;
+
+        @media #{$xs} {
+            grid-template-columns: 1fr; 
+        }
+
+        @media #{$sm} {
+            grid-template-columns: 1fr 1fr; 
+        }
+    }
+
+    &-card { 
+        background: #181A2D;
+        border-radius: 15px;
+        padding: 20px 20px;
+
+        .number {
+            width: 28px;
+            height: 28px;
+            background: var(--ftc-gd-2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--saira);
+            font-weight: 700;
+            color: #fff;
+            font-size: 12px;
+            margin-bottom: -10px;
+        }
+
+        .title {
+            font-size: 30px;
+            line-height: 1.46;
+            margin-bottom: 9px;
+            padding-left: 22px;
+
+            @media #{$lg,$md,$xs} {
+                font-size: 24px;
+            }
+        }
+
+        .disc {
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 15px;
+        }
+
+        .main-img {
+            height: 122px;
+            border-radius: 0 0 12px 12px;
+        }
+    }
+
+    &-phone {
+        position: relative;
+        z-index: 1;
+        width: 83%;
+        margin-left: auto;
+        margin-right: auto;
+
+        .phone-circle {
+            width: 36%;
+            position: absolute;
+            left: 50%;
+            bottom: 50%;
+            transform: translate(-56%, 19%);
+            animation: phone-circle-roted 10s linear infinite ;
+        }
+    }
+}
+
+@keyframes phone-circle-roted {
+    0% {
+        transform: translate(-56%, 19%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-56%, 19%) rotate(360deg);
+    }
+}
+
+.service-matter {
+    canvas {
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+/* 
+    campaign-4-end
 */

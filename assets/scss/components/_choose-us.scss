@@ -488,3 +488,136 @@
 /* 
     choose-us-3-end
 */
+
+/* 
+    choose-us-4-start
+*/
+.ftc-choose-us-4 {
+    &-left {
+        position: relative;
+        z-index: 1;
+        padding-right: 20px;
+
+        @media #{$md,$xs} {
+            padding-right: 0px;
+        }
+    }
+
+    &-img-1 {
+        height: 640px;
+        border-radius: 15px;
+    }
+
+    &-img-2 {
+        max-width: 260px;
+        height: 235px;
+        border-radius: 12px;
+        position: absolute;
+        left: -130px;
+        top: 85px;
+
+        @media #{$xxl,$xl,$lg,$md,$xs} {
+            left: 0px;
+        }
+    }
+
+    &-img-3 {
+        max-width: 430px;
+        height: 300px;
+        border-radius: 12px;
+        position: absolute;
+        bottom: -110px;
+        right: -70px;
+
+        @media #{$xl,$lg} {
+            right: 0px;
+        }
+
+        @media #{$md,$xs} {
+            bottom: 0;
+            right: 0px;
+        }
+    }
+
+    &-content {
+        padding-left: 30px;
+        padding-top: 30px;
+
+        @media #{$xl,$lg} {
+            padding-left: 0px;
+        }
+
+        @media #{$md,$xs} {
+            padding-left: 0px;
+            padding-top: 50px;
+        }
+
+        .inner-div {
+            padding-left: 60px;
+
+            @media #{$xl,$lg,$md,$xs} {
+                padding-left: 0px;
+            }
+        }
+    }
+
+    &-feature-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 12px;
+
+        @media #{$xs} {
+            grid-template-columns: 1fr     
+        }
+
+        @media #{$sm} {
+            grid-template-columns: 1fr 1fr;    
+        }
+    }
+
+    &-feature {
+        text-align: center;
+        padding: 18px 12px;
+        border: 1px solid #CCA6F5;
+        border-radius: 14px;
+
+        .icon {
+            margin-bottom: 12px;
+        }
+        
+        .title {
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        &:hover {
+            .icon {
+                animation: wobble-vertical 1s ease-in-out;
+            }
+        }
+        
+    }
+
+    &-list {
+        li {
+            font-size: 18px;
+            font-family: var(--roboto);
+            color: #fff;
+            line-height: 30px;
+            margin-bottom: 10px;
+
+            i {
+                background: var(--ftc-gd-2);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-right: 7px;
+            }
+        }
+    }
+}
+
+
+
+/* 
+    choose-us-4-end
+*/

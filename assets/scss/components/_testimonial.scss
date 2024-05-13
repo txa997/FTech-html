@@ -613,3 +613,106 @@ testimonial-5-start
 testimonial-5-end
 */
 
+
+/* 
+testimonial-4-start
+*/
+
+
+.ftc-testimonial-4 {
+
+    &-area {
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    &-container {
+        border-radius: 50px;
+        background-color: #141523;
+    }
+
+    &-item {
+        text-align: center;
+
+        .icon {
+            font-size: 80px;
+            line-height: 0;
+            background: var(--ftc-gd-2);
+            display: inline-block;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .item-comment {
+            font-size: 24px;
+            line-height: 2;
+            margin-bottom: 40px;
+        }
+        
+        .ftc-testimonial-3-item-author {
+            display: inline-flex;
+
+            .author-img {
+                width: 62px;
+                height: 62px;
+            }
+
+            .author-name {
+                font-size: 20px;
+            }
+
+            .content {
+                text-align: left;
+            }
+        }
+    }
+
+    &-slider {
+        max-width: 640px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        z-index: 1;
+
+        &-btn {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background: #010317;
+            line-height: 160px;
+            font-size: 30px;
+            border: 2px solid #9446F6;
+            outline: 5px solid #010317;
+            color: #627AF6;
+            cursor: pointer;
+            
+            display: block;
+
+            &:is(.ftc_testimonial_4_prev) {
+                position: absolute;
+                left: -80px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &:is(.ftc_testimonial_4_next) {
+                position: absolute;
+                right: -80px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+
+        }
+    }
+
+}
+
+
+/* 
+testimonial-4-end
+*/
+

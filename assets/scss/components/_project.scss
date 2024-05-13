@@ -480,3 +480,255 @@
 /* 
     project-3-end
 */
+
+/* 
+    project-4-start
+*/
+.ftc-project-4 {
+
+    &-scn-title {
+        max-width: 790px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &-item {
+        height: 765px;
+        border: 1px solid #3E3973;
+        padding: 32px;
+        position: relative;
+        z-index: 1;
+        transition: 500ms var(--cube-1);
+        overflow: hidden;
+
+        @media #{$xs} {
+            height: 500px;
+        }
+
+        .main-img {
+            height: 100%;
+            position: relative;
+            z-index: 1;
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 40%;
+                bottom: 0;
+                left: 0;
+                position: absolute;
+                z-index: 1;
+                background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 212, 255, 0) 100%);
+                opacity: 0;
+                transition: 500ms var(--cube-1);
+            }
+        }
+
+        .content {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            padding: 50px 80px;
+            transition: 1s var(--cube-2);  
+            opacity: 0;
+            visibility: hidden;
+            z-index: 2;
+
+            @media #{$xxl,$xl,$lg,$md,$xs} {
+                padding: 50px 20px;
+            }
+        }
+
+        .subtitle {
+            font-size: 16px;
+            background: var(--ftc-gd-2);
+            display: inline-block;
+            padding: 11px  27px;
+            border-radius: 12px;
+            margin-bottom: 18px;
+        }
+
+        .title {
+            font-size: 32px;
+            line-height: 1.25;
+            transition: 300ms var(--cube-1);
+
+            @media #{$xl,$lg,$md} {
+                font-size: 28px;
+            }
+
+            @media #{$xs} {
+                font-size: 22px;
+            }
+
+            &:hover {
+                color: var(--ftc-pr-2);
+            }
+        }
+
+        .btn-posi {
+            position: absolute;
+            top: 0%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: .5s var(--cube-2);
+            z-index: 2;
+        }
+
+        .ftc-circle-btn-1-icon {
+            background: transparent;
+            font-size: 60px;
+        }
+
+        &:hover {
+            padding: 0;
+
+            .main-img {
+                &::after {
+                    opacity: .9;
+                }
+            }
+
+            .btn-posi {
+                top: 30%;
+                opacity: 1;
+            }
+
+            .content {
+                bottom: 0;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    &-slider {
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .swiper-container {
+
+            transform: translateX(300px);
+
+
+            @media #{$md} {
+                transform: translateX(100px);
+            }
+
+            @media #{$xs} {
+                transform: translateX(0px);
+            }
+
+            .swiper-wrapper {
+                .swiper-slide {
+                    &:is(.swiper-slide-active) {
+                        .ftc-project-4-item {
+                            padding: 0;
+
+                            .main-img {
+                                &::after {
+                                    opacity: .9;
+                                }
+                            }
+
+                            .btn-posi {
+                                top: 30%;
+                                opacity: 1;
+                            }
+                
+                            .content {
+                                bottom: 0;
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+
+
+.ftc-project-4-slider-pagination {
+    text-align: center;
+
+    .swiper-pagination-bullet {
+        font-size: 40px;
+        font-weight: 700;
+        font-family: var(--saira);
+        opacity: 1;
+        line-height: 1;
+        padding: 0 20px;
+        background: transparent;
+        transition: 500ms var(--cube-1);
+        position: relative;
+        z-index: 1;
+
+        
+        &::after {
+            content: "";
+            width: 0%;
+            height: 2px;
+            background: #404149;
+            position: absolute;
+            top: 18px;
+            left: 59px;   
+
+            @media #{$xs} {
+                display: none;
+            }
+        }
+
+        &::before {
+            content: "";
+            width: 0%;
+            height: 2px;
+            background: var(--ftc-gd-2);
+            position: absolute;
+            top: 18px;
+            left: 59px;      
+            z-index: 1;   
+
+            @media #{$xs} {
+                display: none;
+            }
+        }
+
+
+        &:is(.swiper-pagination-bullet-active) {
+            opacity: 100%;
+            color: var(--gly-pr-2);
+            font-weight: 700;
+            background: transparent;
+            padding-right: 315px;
+            color: var(--ftc-pr-2);
+
+            @media #{$xs} {
+                padding-right: 20px;
+            }
+
+            &::after {
+                width: 86%;
+            }
+
+            &::before {
+                width: 86%;
+                transition: 6s linear;
+            }
+
+        }
+    }
+}
+
+
+
+
+/* 
+    project-4-end
+*/

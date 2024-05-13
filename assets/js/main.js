@@ -948,7 +948,6 @@ if($('.ftc-testimonial-3-active').length) {
 }
 
 // testimonial slider start 
-
 let tstimonial__slider1 = new Swiper('.feh_testimonial_3_active', {
 	loop: true,
 	spaceBetween: 0,
@@ -968,6 +967,311 @@ let tstimonial__slider1 = new Swiper('.feh_testimonial_3_active', {
 	  },
 
 });
+
+
+  
+// ftc-prject-4-active
+if($('.ftc-project-4-active').length) {
+	let slider = new Swiper('.ftc-project-4-active', {
+		loop: true,
+		spaceBetween: 0,
+		slidesPerView: 3,
+		speed: 1000,
+		autoplay: {
+			delay: 5000,
+		},
+
+		pagination: {
+			el: ".ftc-project-4-slider-pagination",
+			clickable: true,
+			renderBullet: function (index, className) {
+			  return '<span class="' + className + '">' + (index + 1) + "</span>";
+			},
+		},
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 2,
+			},
+			1200: {
+				slidesPerView: 3,
+			},
+
+		},
+	});
+}
+
+
+  
+// ftc-testimonial-4-active
+if($('.ftc-testimonial-4-active').length) {
+	let slider = new Swiper('.ftc-testimonial-4-active', {
+		loop: true,
+		spaceBetween: 0,
+		slidesPerView: 1,
+		speed: 1000,
+		autoplay: {
+			delay: 5000,
+		},
+
+		navigation: {
+			nextEl: ".ftc_testimonial_4_next",
+			prevEl: ".ftc_testimonial_4_prev",
+		},
+
+	});
+}
+
+
+
+
+
+
+
+
+
+// if (window.innerWidth > 768) {
+// 	const Engine = Matter.Engine;
+// 	const Render = Matter.Render;
+// 	const World = Matter.World;
+// 	const Bodies = Matter.Bodies;
+// 	const Mouse = Matter.Mouse;
+// 	const MouseConstraint = Matter.MouseConstraint;
+
+// 	const engine = Engine.create();
+// 	const render = Render.create({
+// 		element: document.querySelector('.service-matter'),
+// 		engine: engine,
+// 		options: {
+// 			width: window.innerWidth,
+// 			height: window.innerWidth <= 768 ? 300 : 360,
+// 			background: '#5D37CC',
+// 			wireframes: false,
+// 			pixelRatio: window.devicePixelRatio, 
+
+// 		},
+// 	});
+
+// 	const canvas = render.canvas;
+
+// 	Engine.run(engine);
+// 	Render.run(render);
+
+// 	const ground = Bodies.rectangle(render.options.width / 2, render.options.height, render.options.width, 30, {
+// 		isStatic: true,
+// 		render: {
+// 			fillStyle: 'transparent',
+// 			strokeStyle: 'transparent',
+// 		},
+// 	});
+
+// 	const leftWall = Bodies.rectangle(0, render.options.height / 2, 30, render.options.height, {
+// 		isStatic: true,
+// 		render: {
+// 			fillStyle: 'transparent',
+// 			strokeStyle: 'transparent',
+// 		},
+// 	});
+
+// 	const rightWall = Bodies.rectangle(render.options.width, render.options.height / 2, 30, render.options.height, {
+// 		isStatic: true,
+// 		render: {
+// 			fillStyle: 'transparent',
+// 			strokeStyle: 'transparent',
+// 		},
+// 	});
+
+// 	World.add(engine.world, [ground, leftWall, rightWall]);
+
+// 	const pastelColors = ['#ffd1dc', '#d1ffd1', '#d1d1ff', '#ffecd1', '#ffd1ec'];
+
+// 	const texts = [
+// 		"User Interface Design",
+// 		"Digital Marketing",
+// 		"Lack of Brand Differentiation",
+// 		"Application Development",
+// 		"Application Development",
+// 		"Scaling Difficulties",
+// 		"Application Development",
+// 		"Outdated Designs",
+// 		"Products Designs",
+// 		"Branding Designs",
+// 		"3D Animations",
+// 		"3D Illustration Design",
+// 		"Web Application Development",
+// 		"User Interface Design",
+
+// 		];
+// 	function createRoundedStarPath(size) {
+// 		const points = [];
+// 		const innerRadius = size * 0.4;
+// 		const outerRadius = size;
+// 		const angle = Math.PI / 4;
+
+// 		for (let i = 0; i < 8; i++) {
+// 			const currentAngle = angle * i;
+// 			const radius = i % 2 === 0 ? outerRadius : innerRadius;
+// 			const x = Math.cos(currentAngle) * radius;
+// 			const y = Math.sin(currentAngle) * radius;
+// 			points.push({ x, y });
+// 		}
+
+// 		return points;
+// 	}
+
+// 	function updateSizes() {
+// 		if (window.innerWidth <= 768) {
+// 			return {
+// 				fontSize: 12,
+// 				padding: 15,
+// 				width: 200,
+// 				height: 30,
+// 				chamferRadius: 15,
+// 			};
+// 		} else {
+// 			return {
+// 				fontSize: 18,
+// 				padding: 30,
+// 				width: 350,
+// 				height: 50,
+// 				chamferRadius: 25,
+// 			};
+// 		}
+// 	}
+// 	function createBricks() {
+// 		const sizes = updateSizes();
+// 		const { fontSize, padding, width, height, chamferRadius } = sizes;
+
+// 		const bricks = texts.map((text, index) => {
+// 			const randomX = render.options.width / 2 + (Math.random() - 0.5) * 500;
+// 			const y = -index * 100;
+
+// 			render.context.font = `${fontSize}px Inter, sans-serif`;
+// 			const brickWidth = width || 350;
+// 			const brickHeight = height || 50;
+
+// 			const pastelColor = pastelColors[Math.floor(Math.random() * pastelColors.length)];
+
+// 			const randomVelocityX = (Math.random() - 0.5) * 4;
+// 			const randomVelocityY = Math.random() * 4;
+
+// 			return Bodies.rectangle(randomX, y, brickWidth, brickHeight, {
+// 				chamfer: { radius: chamferRadius },
+// 				render: {
+// 					fillStyle: 'transparent',
+// 					strokeStyle: '#9D83B4',
+// 					lineWidth: 1,
+// 					text: {
+// 						content: text,
+// 						size: fontSize,
+// 						color: '#E8D9F5',
+// 					},
+// 				},
+// 				velocity: {
+// 					x: randomVelocityX,
+// 					y: randomVelocityY,
+// 				},
+// 			});
+// 		});
+
+// 		window.addEventListener('resize', () => {
+// 			World.clear(engine.world, true); 
+// 			createBricks(); 
+// 		});
+
+
+// 		World.add(engine.world, [...bricks]);
+
+
+// 		render.context.font = '18px Inter, sans-serif';
+// 		render.context.textAlign = 'center';
+// 		render.context.textBaseline = 'middle';
+
+// 		Matter.Events.on(render, 'afterRender', () => {
+// 			bricks.forEach((brick) => {
+// 				const { x, y } = brick.position;
+// 				const angle = brick.angle;
+// 				const { content, size, color } = brick.render.text;
+
+// 				render.context.font = `${size}px Inter, sans-serif`;
+
+// 				render.context.save();
+// 				render.context.translate(x, y);
+// 				render.context.rotate(angle);
+// 				render.context.fillStyle = color;
+// 				render.context.fillText(content, 0, 0);
+// 				render.context.restore();
+// 			});
+// 		});
+// 	}
+
+// 	const mouse = Mouse.create(render.canvas);
+// 	const mouseConstraint = MouseConstraint.create(engine, {
+// 		mouse: mouse,
+// 		constraint: {
+// 			render: {
+// 				visible: false,
+// 			},
+// 		},
+// 	});
+
+// 	World.add(engine.world, mouseConstraint);
+// 	render.mouse = mouse;
+
+// 	const observer = new IntersectionObserver(
+// 		(entries) => {
+// 			entries.forEach((entry) => {
+// 				if (entry.isIntersecting) {
+// 					createBricks();
+// 					observer.unobserve(entry.target);
+// 				}
+// 			});
+// 		},
+// 		{
+// 			threshold: 0.1, 
+// 		}
+// 		);
+
+// 	observer.observe(canvas);
+
+
+// 	mouseConstraint.mouse.element.removeEventListener("mousewheel", mouseConstraint.mouse.mousewheel);
+// 	mouseConstraint.mouse.element.removeEventListener("DOMMouseScroll", mouseConstraint.mouse.mousewheel);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
