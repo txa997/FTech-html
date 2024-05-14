@@ -627,11 +627,80 @@ testimonial-4-start
         margin-right: auto;
         padding-left: 70px;
         padding-right: 70px;
+
+
+        @media #{$xs} {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
     }
 
     &-container {
         border-radius: 50px;
         background-color: #141523;
+        position: relative;
+        z-index: 1;
+
+        @media #{$xs} {
+            border-radius: 20px;
+        }
+    }
+
+    &-img {
+        width: 165px;
+        height: 165px;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50% , -50%);
+        
+
+        @media #{$lg,$md,$xs} {
+            display: none;
+        }
+
+        &:is(.item-1) {
+            transform: translate(-479%, -90%);
+        }
+
+        &:is(.item-2) {
+            transform: translate(-509%, -260%);
+            width: 95px;
+            height: 95px;
+        }
+
+        &:is(.item-3) {
+            transform: translate(620%, -420%);
+            width: 72px;
+            height: 72px;
+        }
+
+        &:is(.item-4) {
+            transform: translate(810%, -290%);
+            width: 72px;
+            height: 72px;
+        }
+
+        &:is(.item-5) {
+            transform: translate(480%, -110%);
+            width: 150px;
+            height: 150px;
+        }
+
+        &:is(.item-6) {
+            transform: translate(460%, 129%);
+            width: 110px;
+            height: 110px;
+        }
+
+        &:is(.item-7) {
+            transform: translate(-500%, 169%);
+            width: 110px;
+            height: 110px;
+        }
+
     }
 
     &-item {
@@ -644,16 +713,27 @@ testimonial-4-start
             display: inline-block;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+
+            transform: translateY(-100px);
+            opacity: 0;
+            transition: .5s var(--cube-2);
         }
 
         .item-comment {
             font-size: 24px;
             line-height: 2;
             margin-bottom: 40px;
+
+            @media #{$md,$xs} {
+                font-size: 20px; 
+            }
         }
         
         .ftc-testimonial-3-item-author {
             display: inline-flex;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: 1s var(--cube-2);
 
             .author-img {
                 width: 62px;
@@ -677,6 +757,10 @@ testimonial-4-start
         position: relative;
         z-index: 1;
 
+        @media #{$md} {
+            max-width: 420px;
+        }
+
         &-btn {
             width: 160px;
             height: 160px;
@@ -688,14 +772,37 @@ testimonial-4-start
             outline: 5px solid #010317;
             color: #627AF6;
             cursor: pointer;
-            
             display: block;
+            transition: 400ms var(--cube-1);
+
+            @media #{$xs} {
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+            }
+
+            &:hover {
+                background: #B325F7;
+                color: #fff;
+            }
 
             &:is(.ftc_testimonial_4_prev) {
                 position: absolute;
                 left: -80px;
                 top: 50%;
                 transform: translateY(-50%);
+                text-align: right;
+                padding-right: 30px;
+
+                @media #{$xs} {
+                    transform: unset;
+                    left: 30px;
+                    top: unset;
+                    bottom: 30px;
+                    padding-right: 0px;
+                    text-align: center;
+                }
             }
 
             &:is(.ftc_testimonial_4_next) {
@@ -703,12 +810,51 @@ testimonial-4-start
                 right: -80px;
                 top: 50%;
                 transform: translateY(-50%);
+                padding-left: 30px;
+
+                @media #{$xs} {
+                    transform: unset;
+                    right: 30px;
+                    top: unset;
+                    bottom: 30px;
+                    padding-left: 0;
+                    text-align: center;
+                }
             }
 
 
         }
+
+        .swiper-container {
+            .swiper-wrapper {
+                .swiper-slide {
+                    &:is(.swiper-slide-active) {
+                        .ftc-testimonial-4-item {
+                            .icon {
+                                transition-delay: .7s;
+                                transform: translateY(0px);
+                                opacity: 1;
+                            }
+                            .ftc-testimonial-3-item-author {
+                                transition-delay: .7s;
+                                transform: translateY(0px);
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
+
+    &-area {
+        &:is(.active) {
+            .ftc-testimonial-4-img {
+                opacity: 1;
+            }
+        }
+    }
 }
 
 

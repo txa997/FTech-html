@@ -312,6 +312,159 @@
     cta-4-end
 */
 
+/* 
+    cta-5-start
+*/
+
+.ftc-cta-5 {
+    &-content {
+        padding: 35px;
+        border-radius: 20px;
+        overflow: hidden;
+
+        @media #{$xs} {
+            padding: 35px 10px;
+        }
+    
+
+        @media #{$sm} {
+            padding: 35px;
+        }
+    
+        .title {
+            font-size: 37px;
+            line-height: 1.29;
+            margin-bottom: 12px;
+        }
+    
+        .disc {
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+
+    &-img {
+        position: relative;
+        z-index: 1;
+        border-radius: 20px;
+        height: 360px;
+
+        @media #{$md,$xs} {
+            margin-bottom: 30px;
+        }
+
+        .ftc-social-link-1 {
+            position: absolute;
+            bottom: 25px;
+            left: 30px;
+            gap: 20px;
+
+            .this-link {
+                background: transparent;
+                font-size: 18px;
+                color: #fff;
+                border: 1px solid #fff;
+
+                &:hover {
+                    background: var(--ftc-pr-2);
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+    
+    &-form {
+        background: rgb(31 39 62 / 70%);
+        border-radius: 20px;
+        border: 1px solid rgb(255 255 255 / 10%);
+        backdrop-filter: blur(50px);
+        padding: 40px 50px;
+
+        @media #{$xs} {
+            padding: 40px 20px;
+        }
+    
+
+        @media #{$sm} {
+            padding: 40px 50px;
+        }
+    
+
+        .input-box {
+            display: block;
+            width: 100%;
+            height: 50px;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid rgb(255 255 255 / 20%);
+            background: transparent;
+            font-family: var(--roboto);
+            font-size: 18px;
+            color: rgb(255 255 255 / 50%);
+            margin-bottom: 22px;
+
+            &:is(.textarea) {
+                height: 120px;
+            }
+        }
+
+        .input-label {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 22px;
+            margin-bottom: 4px;
+            span {
+                color: red;
+            }
+        }
+        
+        .form-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-family: var(--saira);
+            text-transform: capitalize;
+            font-size: 18px;
+            font-weight: 600;
+            background: var(--ftc-gd-2);
+            color: #fff;
+            border-radius: 47px;
+            padding: 15px;
+            position: relative;
+            z-index: 1;
+
+            &::after {
+                content: "";
+                width: 0%;
+                height: 100%;
+                background: var(--ftc-pr-2);
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                border-radius: 47px;
+                backdrop-filter: blur(110px);
+                opacity: 0;
+                transition: 400ms var(--cube-1);
+
+            }
+
+            &:hover {
+                &::after {
+                    width: 100%;
+                    opacity: .7;
+                }
+            }
+        }
+        
+    }
+}
+
+
+/* 
+    cta-5-end
+*/
+
 
 
 
