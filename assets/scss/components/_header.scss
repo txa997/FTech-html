@@ -496,6 +496,10 @@
       z-index: -1;
     }
 
+    @media #{$lg} {
+      width: 200px;
+    }
+
     @media #{$xs} {
       width: 200px;
     }
@@ -511,7 +515,31 @@
       }
     }
 
-    .ftc-btn-1  {
+    .ftc-pr-btn-5  {
+      padding: 36px 56px;
+      border-radius: 0 100px 100px 0;
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        background: #fff;
+        right: 49px;
+        top: 38%;
+      }
+
+      i {
+        color: #5588F6;
+      }
+
+      &:hover {
+        color: #B325F7;
+        i {
+          color: #B325F7;
+        }
+      }
+
       @media #{$xs} {
         display: none;
       }

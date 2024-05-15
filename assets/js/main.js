@@ -68,12 +68,23 @@ document.addEventListener("DOMContentLoaded", function () {
 		.from(".ftc-hero-3-disc " , {  transform: "rotateX(47deg) translateY(-200px)" , transformOrigin: "50% 0%",		duration:1.5, ease: "bounce.out", opacity:0 }, "<=1" )
 		.from(".ftc-hero-3-title " , {  transform: "rotateX(47deg) translateY(-200px)" , transformOrigin: "50% 0%",		duration:1.5, ease: "bounce.out", opacity:0 }, "<=.5")
 
+		// hero-3-animation
+		const h4tl = gsap.timeline();
+
+		h4tl.from(".section-bg-1-cube-1" , { xPercent: -430, yPercent: -220 , rotate: 360,	duration:2.5, ease: "ease", })
+			.from(".section-bg-1-cube-2" , { xPercent: 430, yPercent: -220 , rotate: 360,	duration:2.5, ease: "ease", }, "<")
+			.from(".section-bg-1-cube-3" , { xPercent: -430, yPercent: 220 , rotate: 360,	duration:2.5, ease: "ease", }, "<")
+			.from(".section-bg-1-cube-4" , { xPercent: 430, yPercent: 220 , rotate: 360,	duration:2.5, ease: "ease", }, "<")
+			.from(".ftc-hero-4-content .title .split-line " , { opacity: 0, transformOrigin: "50% 100%", transform: "rotateX(90deg)", stagger: .5, ease: "elastic.out(1,0.3)", duration: 2.5,  }, )
+			.from(".ftc-hero-4-content .btn-wrap " , { opacity: 0, yPercent: 50, ease: "elastic.out(1,0.3)", duration: 2.5,  }, "<=1" )
+		
 		// hero 5 start 
 		gsap.timeline().from(".feh-hero-3-img" , { opacity: 0, y: 400, duration: 2, delay: 1 });
 
 	})
 
 });
+
 
 
 function glystickyHeader() {
@@ -134,6 +145,10 @@ $('.overlay, .search_1_popup_close').on('click', function() {
 
 // mobile-menu-toggle-start
 gsap.registerPlugin(ScrollTrigger);
+
+gsap.config({
+	nullTargetWarn: false,
+});
 
 var menuToggle = document.getElementById("menuToggle")
 var menuToggle2 = document.getElementById("menuToggle2")
@@ -682,6 +697,94 @@ var ftctesti4 = gsap.timeline({
 	
 ftctesti4.from(".ftc-testimonial-4-area" , {   padding: "0px" , duration: 1  })
 ftctesti4.from(".ftc-testimonial-4-img" , {   scale: 0 , stagger: 1, }, "<")
+
+
+
+// // hero-4-trigger
+var ftch4st001 = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".section-bg-1",
+		pin: ".section-bg-1-cube-grid",
+		pinSpacing: true,
+		markers: false,
+		toggleActions: "play none none reverse",
+	}
+});
+
+
+var ftch4st00 = gsap.timeline({
+	scrollTrigger: {
+	  trigger: ".ftc-hero-4-content",
+	  start: "top -40%",
+	  end: "top -100%",
+	  toggleActions: "play none none reverse",
+	  markers: false
+	}
+});
+  
+  // Define the animations within the timeline
+  ftch4st00
+	.to(".section-bg-1-cube-1", { xPercent: -430, yPercent: -220, opacity: 0, rotate: 360, duration: 2.5, ease: "ease" })
+	.to(".section-bg-1-cube-2", { xPercent: 430, yPercent: -220, opacity: 0, rotate: 360, duration: 2.5, ease: "ease" }, "<")
+	.to(".section-bg-1-cube-3", { xPercent: -430, yPercent: 220, opacity: 0, rotate: 360, duration: 2.5, ease: "ease" }, "<")
+	.to(".section-bg-1-cube-4", { xPercent: 430, yPercent: 220, opacity: 0, rotate: 360, duration: 2.5, ease: "ease" }, "<")
+  
+
+
+// ftc-about-4
+var ftctesti4 = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: ftctesti4,
+	  trigger: '.ftc-about-4-img',
+	  start: "top 80%",
+	  end: "top 30%",
+	  scrub: 1,
+	  toggleActions: "play reverse play reverse",
+	  markers: false
+	}
+});
+	
+ftctesti4.from(".ftc-about-4-img" , {   marginLeft: "-300px" , marginRight: "-300px" , duration: 1  })
+
+
+// ftc-services-4
+var ftsrv4 = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: ftsrv4,
+	  trigger: '.ftc-services-4-card-grid',
+	  start: "top 80%",
+	  end: "top 30%",
+	  scrub: 1,
+	  toggleActions: "play reverse play reverse",
+	  markers: false
+	}
+});
+	
+ftsrv4
+.from(".ftc-services-4-card-grid .cleft-side" , {   xPercent: -100 , stagger: .3, duration: 2  })
+.from(".ftc-services-4-card-grid .cright-side" , {   xPercent: 100 , stagger: .3, duration: 2  }, "<=")
+
+
+// ftc-archieve-4
+var ftcar4 = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: ftcar4,
+	  trigger: '.ftc-achieve-4-area',
+	  start: "top 80%",
+	  end: "top 50%",
+	  scrub: 1,
+	  toggleActions: "play reverse play reverse",
+	  markers: false
+	}
+});
+	
+ftcar4
+.from(".ftc-achieve-4-row" , {   scaleX: .5 , duration: 2  })
+.from(".ftc-achieve-4-shape-1" , {   xPercent: -100 , duration: 2  })
+.from(".ftc-achieve-4-shape-2" , {   xPercent: 100 , duration: 2  }, "<=")
 
 
 

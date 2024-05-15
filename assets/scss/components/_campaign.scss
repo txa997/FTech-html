@@ -388,14 +388,109 @@
     }
 }
 
-.service-matter {
-    canvas {
-        width: 100% !important;
-        height: 100% !important;
+
+
+.ftc-campaign-4 {
+    &-box {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        pointer-events: none;
+        padding: 40px 30px;
+        background: #5D37CC;
+        border-radius: 15px;
+
+        @media #{$md,$xs} {
+            height: 600px;
+        }
+
+        @media #{$xs} {
+            height: 800px;
+        }
+
+        @media #{$sm} {
+            height: 600px;
+        }
+    
+        .title {
+            font-size: 42px;
+            line-height: 1.21;
+
+            @media #{$xl,$lg,$md} {
+                font-size: 32px;
+            }
+
+            @media #{$xs} {
+                font-size: 24px;
+            }
+        }
+    }
+
+    &-tag-wrap > .ftc-campaign-4-tag {
+        position: absolute;
+        display: inline-block;
+        margin-bottom: 0;
+        left: 0;
+        top: 0;
+        user-select: none;
+        pointer-events: auto;
+        transition: none;
+    }
+
+    &-tag-item {
+        display: inline-block;
+        -webkit-transform: translate(-50%, -50%) rotate(0.01rad);
+        -moz-transform: translate(-50%, -50%) rotate(0.01rad);
+        -ms-transform: translate(-50%, -50%) rotate(0.01rad);
+        -o-transform: translate(-50%, -50%) rotate(0.01rad);
+        transform: translate(-50%, -50%) rotate(0.01rad);
+    
+        background: #7F5BEA;
+        padding: 15px 30px;
+        border-radius: 100px;
+        position: relative;
+        z-index: 1;
+        
+        user-select: none;
+        pointer-events: auto;
+
+
+
+        img {
+            user-select: none;
+            pointer-events: none;
+            transition: none;
+        }
+    
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 100px;
+            background: var(--ftc-gd-2);
+            z-index: -1;
+            transition: .3s var(--cube-1);
+            opacity: 0;
+            user-select: none;
+            pointer-events: auto;
+
+        }
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+        }
     }
 }
+
 
 /* 
     campaign-4-end
 */
 
+
+
+  

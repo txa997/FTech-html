@@ -635,9 +635,14 @@
 .ftc-hero-4 {
     &-area {
         padding-top: 305px;
-        padding-bottom: 110px;
+        padding-bottom: 80vh;
         position: relative;
         z-index: 1;
+
+        @media #{$xs} {
+            padding-top: 200px;
+        }
+
     }
 
     &-content {
@@ -727,7 +732,35 @@
 
 
 
+.section-bg-1 {
+    position: relative;
+    z-index: 1;
 
+    &-cube-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 445px;
+        height: 532px;
+        position: absolute;
+        left: 50%;
+        top: 10%;
+        transform: translateX(-50%);
+    
+        @media #{$xs} {
+            width: 300px;
+            height: 352px;
+        }
+    
+    }
+
+    &-cube-2 {
+        margin-left: -2px;
+    }
+
+    &-cube-4 {
+        margin-left: -2px;
+    }
+}
 
 /* 
     hero-4-end

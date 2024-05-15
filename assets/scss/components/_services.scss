@@ -348,6 +348,131 @@
         }
     }
 
+    &-card-single {
+        &:nth-child(1) {
+            .ftc-services-4-card-roted  {
+                @media #{$over,$xxxl,$xxl,$xl} {
+                    transform: rotate(-5.47deg) translate(210px, 110px);
+    
+                    &:hover {
+                        width: 400px;
+                        transform: rotate(0deg)  translate(210px, 110px);
+                    }
+                }
+            }
+        }
+        &:nth-child(2) {
+            .ftc-services-4-card-roted  {
+                @media #{$over,$xxxl,$xxl,$xl} {
+                    transform: rotate(-4.36deg) translate(80px, 226px);
+    
+                    &:hover {
+                        width: 400px;
+                        transform: rotate(0deg) translate(80px, 226px);
+                    }
+                }
+    
+    
+                .ftc-services-4-card {
+                    background: #E45621;
+            
+                    .icon {
+                        background: #C55126;
+                        border: 8px solid #E45621;
+                    }
+                }
+            }
+        }
+        &:nth-child(3) {
+            .ftc-services-4-card-roted  {
+                @media #{$over,$xxxl,$xxl,$xl} {
+                    transform: rotate(13.3deg) translate(20px, 30px);
+    
+                    &:hover {
+                        width: 400px;
+                        transform: rotate(0deg)  translate(20px, 30px);
+                    }
+                }
+    
+    
+                .ftc-services-4-card {
+                    background: #1AC975;
+    
+                    .icon {
+                        background: #1CAF69;
+                        border: 8px solid #1AC975;
+                    }
+                }
+            }
+        }
+        &:nth-child(4) {
+            .ftc-services-4-card-roted  {
+                @media #{$over,$xxxl,$xxl,$xl} {
+                    transform: rotate(-30deg) translate(-130px, 103px);
+    
+                    &:hover {
+                        width: 400px;
+                        transform: rotate(0deg) translate(-130px, 103px);
+                    }
+                }
+    
+    
+                .ftc-services-4-card {
+                    background: #2925F7;
+    
+                    .icon {
+                        background: #3432BD;
+                        border: 8px solid #2925F7;
+                    }
+                }
+            }
+        }
+        &:nth-child(5) {
+            .ftc-services-4-card-roted  {
+                @media #{$over,$xxxl,$xxl,$xl} {
+                    transform: rotate(7.09deg) translate(-160px, 20px);
+    
+                    &:hover {
+                        width: 400px;
+                        transform: rotate(0deg) translate(-160px, 20px);
+                    }
+                }
+    
+    
+                .ftc-services-4-card {
+                    background: #DF8E14;
+    
+                    .icon {
+                        background: #BB7D20;
+                        border: 8px solid #DF8E14;
+                    }
+                }
+            }
+        }
+        &:nth-child(6) {
+            .ftc-services-4-card-roted  {
+                @media #{$over,$xxxl,$xxl,$xl} {
+                    transform: rotate(43deg) translate(-124px, 300px);
+    
+                    &:hover {
+                        width: 400px;
+                        transform: rotate(0deg) translate(-365px, 270px);
+                    } 
+                }
+    
+    
+                .ftc-services-4-card {
+                    background: #2AC5DD;
+    
+                    .icon {
+                        background: #3AB0C2;
+                        border: 8px solid #2AC5DD;
+                    }
+                }
+            }
+        }
+    }
+
     &-card-roted {
         display: inline-block;
         transition: 1s;
@@ -359,124 +484,6 @@
             width: 100%;
         }
 
-        &:nth-child(1) {
-            @media #{$over,$xxxl,$xxl,$xl} {
-                transform: rotate(-5.47deg) translate(210px, 110px);
-
-                &:hover {
-                    width: 400px;
-                    transform: rotate(0deg)  translate(210px, 110px);
-                }
-            }
-
-
-        }
-
-        &:nth-child(2) {
-            @media #{$over,$xxxl,$xxl,$xl} {
-                transform: rotate(-4.36deg) translate(80px, 226px);
-
-                &:hover {
-                    width: 400px;
-                    transform: rotate(0deg) translate(80px, 226px);
-                }
-            }
-
-
-            .ftc-services-4-card {
-                background: #E45621;
-        
-                .icon {
-                    background: #C55126;
-                    border: 8px solid #E45621;
-                }
-            }
-
-        }
-
-        &:nth-child(3) {
-            @media #{$over,$xxxl,$xxl,$xl} {
-                transform: rotate(13.3deg) translate(20px, 30px);
-
-                &:hover {
-                    width: 400px;
-                    transform: rotate(0deg)  translate(20px, 30px);
-                }
-            }
-
-
-            .ftc-services-4-card {
-                background: #1AC975;
-
-                .icon {
-                    background: #1CAF69;
-                    border: 8px solid #1AC975;
-                }
-            }
-        }
-
-        &:nth-child(4) {
-            @media #{$over,$xxxl,$xxl,$xl} {
-                transform: rotate(-30deg) translate(-130px, 103px);
-
-                &:hover {
-                    width: 400px;
-                    transform: rotate(0deg) translate(-130px, 103px);
-                }
-            }
-
-
-            .ftc-services-4-card {
-                background: #2925F7;
-
-                .icon {
-                    background: #3432BD;
-                    border: 8px solid #2925F7;
-                }
-            }
-        }
-
-        &:nth-child(5) {
-            @media #{$over,$xxxl,$xxl,$xl} {
-                transform: rotate(7.09deg) translate(-160px, 20px);
-
-                &:hover {
-                    width: 400px;
-                    transform: rotate(0deg) translate(-160px, 20px);
-                }
-            }
-
-
-            .ftc-services-4-card {
-                background: #DF8E14;
-
-                .icon {
-                    background: #BB7D20;
-                    border: 8px solid #DF8E14;
-                }
-            }
-        }
-
-        &:nth-child(6) {
-            @media #{$over,$xxxl,$xxl,$xl} {
-                transform: rotate(43deg) translate(-124px, 300px);
-
-                &:hover {
-                    width: 400px;
-                    transform: rotate(0deg) translate(-365px, 270px);
-                } 
-            }
-
-
-            .ftc-services-4-card {
-                background: #2AC5DD;
-
-                .icon {
-                    background: #3AB0C2;
-                    border: 8px solid #2AC5DD;
-                }
-            }
-        }
     }
     
     &-card {
