@@ -625,24 +625,26 @@
             .swiper-wrapper {
                 .swiper-slide {
                     &:is(.swiper-slide-active) {
-                        .ftc-project-4-item {
-                            padding: 0;
-
-                            .main-img {
-                                &::after {
-                                    opacity: .9;
+                        @media #{$xs} {
+                            .ftc-project-4-item {
+                                padding: 0;
+    
+                                .main-img {
+                                    &::after {
+                                        opacity: .9;
+                                    }
                                 }
-                            }
-
-                            .btn-posi {
-                                top: 30%;
-                                opacity: 1;
-                            }
-                
-                            .content {
-                                bottom: 0;
-                                opacity: 1;
-                                visibility: visible;
+    
+                                .btn-posi {
+                                    top: 30%;
+                                    opacity: 1;
+                                }
+                    
+                                .content {
+                                    bottom: 0;
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
                             }
                         }
                     }

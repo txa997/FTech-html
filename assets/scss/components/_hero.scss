@@ -24,19 +24,51 @@
 
     &-il-1 {
         position: absolute;
-        top: 0;
+        top: -215px;
         right: 0;
         left: 0;
         max-width: 1920px;
         margin-left: auto;
         margin-right: auto;
 
-        @media #{$xs} {
-            width: 70%;
-        }
+        img {
+            width: 18%;
+            margin-left: -30px;
 
-        @media #{$sm} {
-            width: 50%;
+            @media #{$xxxl} {
+                width: 22%;
+                margin-left: -60px;
+            }
+
+            @media #{$xxl} {
+                width: 25%;
+                margin-left: -60px;
+            }
+
+            @media #{$xl} {
+                width: 30%;
+                margin-left: -60px;
+            }
+
+            @media #{$lg} {
+                width: 35%;
+                margin-left: -60px;
+            }
+
+            @media #{$md} {
+                width: 45%;
+                margin-left: -60px;
+            }
+
+            @media #{$xs} {
+                width: 100%;
+                margin-left: -100px;
+            }
+
+            @media #{$sm} {
+                width: 55%;
+                margin-left: -90px;
+            }
         }
     }
 

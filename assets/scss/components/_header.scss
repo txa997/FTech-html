@@ -763,15 +763,28 @@
   top: 0;
   left: 0;
   right: 0;
-  transition: 500ms var(--cube-1);
+  transition: 200ms var(--cube-1);
   z-index: 8;
 
-  &:is(.blta-header-1-area) {
+  &:is(.ftc-header-1-area) {
     top: 25px;
     &:is(.txa_sticky) {
       transform: translateY(-150%);
- 
 
+      &:is(.txa_sticky_show) {
+        top: 0;
+        transform: translateY(0%);
+        padding: 15px 0;
+        background: #191917b0;
+      }
+    }
+
+  }
+
+  &:is(.ftc-header-2-area) {
+    &:is(.txa_sticky) {
+      transform: translateY(-150%);
+      background-color: #222429;
       &:is(.txa_sticky_show) {
         transform: translateY(0%);
       }
@@ -779,23 +792,40 @@
 
   }
 
-  &:is(.blta-header-2-area) {
+  &:is(.ftc-header-3-area) {
     top: 30px;
     &:is(.txa_sticky) {
       transform: translateY(-150%);
-      background-color: #222429;
       &:is(.txa_sticky_show) {
+        top: 0;
+        padding: 10px 0;
+        background: #000;
         transform: translateY(0%);
       }
     }
 
   }
 
-  &:is(.blta-header-3-area) {
+  &:is(.ftc-header-4-area) {
+    top: 25px;
     &:is(.txa_sticky) {
       transform: translateY(-150%);
-      background-color: #222429;
       &:is(.txa_sticky_show) {
+        top: 10px;
+        transform: translateY(0%);
+      }
+    }
+
+  }
+
+  &:is(.feh-header-3-area) {
+    top: 30px;
+    &:is(.txa_sticky) {
+      transform: translateY(-150%);
+      &:is(.txa_sticky_show) {
+        top: 0;
+        background: #fff;
+        padding: 10px 0;
         transform: translateY(0%);
       }
     }
