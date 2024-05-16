@@ -145,6 +145,36 @@ input:focus::placeholder, textarea:focus::placeholder {
     background: var(--ftc-pr-1);
     border-radius: 30px;
   }
+  .ftc-home-3::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+  }
+  .ftc-home-3::-webkit-scrollbar-track {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+  }
+  .ftc-home-3::-webkit-scrollbar-thumb {
+    background: var(--ftc-pr-2);
+    border-radius: 30px;
+  }
+  .ftc-home-4::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+  }
+  .ftc-home-4::-webkit-scrollbar-track {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+  }
+  .ftc-home-4::-webkit-scrollbar-thumb {
+    background: var(--ftc-pr-2);
+    border-radius: 30px;
+  }
 }
 /* 
     global-css-start
@@ -2676,7 +2706,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   left: 0;
   top: -100px;
   width: 100%;
-  z-index: 5;
+  z-index: 9;
   height: 100vh;
   align-items: center;
   transform: scaleY(0);

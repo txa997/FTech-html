@@ -116,7 +116,51 @@ input:focus::placeholder, textarea:focus::placeholder {
     ::-webkit-scrollbar-thumb {
     background: var(--ftc-pr-1);
     border-radius: 30px;
+
     }
+    
+    .ftc-home-3 {
+        &::-webkit-scrollbar {
+            width: 5px;
+            background-color: transparent;
+            box-shadow: none;
+            border: none;
+        }
+            
+        &::-webkit-scrollbar-track {
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        }
+            
+        &::-webkit-scrollbar-thumb {
+        background: var(--ftc-pr-2);
+        border-radius: 30px;
+    
+        }
+    }
+    
+    .ftc-home-4 {
+        &::-webkit-scrollbar {
+            width: 5px;
+            background-color: transparent;
+            box-shadow: none;
+            border: none;
+        }
+            
+        &::-webkit-scrollbar-track {
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        }
+            
+        &::-webkit-scrollbar-thumb {
+        background: var(--ftc-pr-2);
+        border-radius: 30px;
+    
+        }
+    }
+
 }
 
 /* 
