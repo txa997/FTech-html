@@ -9,7 +9,7 @@
 
 
 const lenis = new Lenis({
-	duration: 2,	
+	duration: 1,	
 })
 
 // smoooth scroll activation start
@@ -1326,11 +1326,6 @@ popup-img-activition
 if($('.nice-select').length) {
 	$('.nice-select select').niceSelect();
 }
-
-// parallax-img
-$('.parallax-img').parallaxie({  
-	speed: 0.5,    
-});
 
 console.warn = function() {};
 
